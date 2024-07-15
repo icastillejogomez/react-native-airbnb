@@ -1,0 +1,7 @@
+node_modules
+.expo
+dist
+ios
+__tests__
+_bundle
+android
