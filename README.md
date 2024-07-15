@@ -79,7 +79,7 @@ Write as many things you think are important to complete the challenge. Mark the
 - [x] Ensure NPM as package manager
 - [x] Upgrade React Native to the latest version
 - [x] Check app runs and test are passing
-- [ ] Install Expo framework and run the app
+- [x] Install Expo framework and run the app
 - [ ] Prepare basic Pipeline to ensure code quality
 - [ ] Check GraphQL API works as expected
 - [ ] Think about missing data in the API and also think about the UI
