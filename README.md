@@ -80,13 +80,18 @@ Write as many things you think are important to complete the challenge. Mark the
 - [x] Upgrade React Native to the latest version
 - [x] Check app runs and test are passing
 - [x] Install Expo framework and run the app
+- [ ] Install Prettier and Git hooks
+- [ ] Update Expo configuration (Typescript, app.json, etc.)
 - [ ] Prepare basic Pipeline to ensure code quality
 - [ ] Check GraphQL API works as expected
-- [ ] Think about missing data in the API and also think about the UI
 
 ### Implementing the challenge
 
-- [ ] Implement the UI
+- [ ] Create project structure
+- [ ] Create app theme hooks
+- [ ] Think about missing data in the API and also think about the UI
+- [ ] Draw a low fidelity prototype
+- [ ] Implement the UI MVP (and thinks next steps...)
 
 ## Explanations about the challenge decisions
 
