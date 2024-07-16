@@ -83,7 +83,7 @@ Write as many things you think are important to complete the challenge. Mark the
 - [x] Install Prettier and Git hooks
 - [ ] Update Expo configuration (Typescript, app.json, etc.)
 - [ ] Prepare basic Pipeline to ensure code quality
-- [ ] Check GraphQL API works as expected
+- [x] Check GraphQL API works as expected
 
 ### Implementing the challenge
 
