@@ -1,0 +1,39 @@
+name: QA
+
+on:
+  workflow_call:
+    inputs:
+      BACKOFFICE_FRONTEND_WEBSITE_PATH:
+        required: true
+        type: string
+      BACKEND_CMS_PATH:
+        required: true
+        type: string
+
+jobs:
+  qa:
+    name: Lint + Build + Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+
+      - uses: actions/cache@v3
+        with:
+          path: 'node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('package-lock.json') }}
+
+      - name: Lint code
+        run: npm run lint
+
+      - name: Build applications and libraries
+        run: npm run check-types
+
+      - name: Run test suites
+        run: npm run test:ci
+
+      # - name: Run e2e test suites
+      #   run: npx nx run-many --all --target=e2e --parallel=1 --ci --code-coverage --runInBand
