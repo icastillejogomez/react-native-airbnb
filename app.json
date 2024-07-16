@@ -1,4 +1,34 @@
 {
-  "name": "fcmTravelGuide",
-  "displayName": "fcmTravelGuide"
+  "expo": {
+    "name": "fcmTravelGuide",
+    "slug": "fcmTravelGuide",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "fcm-travel-guide",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.github.icastillejogomez.fcmTravelGuide.ios"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.github.icastillejogomez.fcmTravelGuide.android"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
 }
