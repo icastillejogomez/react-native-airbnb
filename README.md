@@ -80,7 +80,7 @@ Write as many things you think are important to complete the challenge. Mark the
 - [x] Upgrade React Native to the latest version
 - [x] Check app runs and test are passing
 - [x] Install Expo framework and run the app
-- [ ] Install Prettier and Git hooks
+- [x] Install Prettier and Git hooks
 - [ ] Update Expo configuration (Typescript, app.json, etc.)
 - [ ] Prepare basic Pipeline to ensure code quality
 - [ ] Check GraphQL API works as expected
