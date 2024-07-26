@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "fcmTravelGuide",
+    "name": "FCM Travel Guide",
     "slug": "fcmTravelGuide",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -8,12 +8,12 @@
     "scheme": "fcm-travel-guide",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/images/splash.png",
+      "image": "./assets/images/splash.jpg",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#1B2232"
     },
     "ios": {
-      "supportsTablet": true,
+      "supportsTablet": false,
       "bundleIdentifier": "com.github.icastillejogomez.fcmTravelGuide.ios"
     },
     "android": {
