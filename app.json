@@ -1,27 +1,32 @@
 {
   "expo": {
-    "name": "FCM Travel Guide",
-    "slug": "fcmTravelGuide",
-    "version": "1.0.0",
+    "name": "Airbnb",
+    "slug": "airbnb",
+    "version": "0.1.0",
+    "sdkVersion": "51.0.21",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "fcm-travel-guide",
+    "icon": "./assets/app-specifics/icon.png",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "scheme": "airbnb",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/images/splash.jpg",
+      "image": "./assets/app-specifics/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#1B2232"
+      "backgroundColor": "#FFFFFF"
     },
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.github.icastillejogomez.fcmTravelGuide.ios"
+      "bundleIdentifier": "com.github.icastillejogomez.reactNativeAirbnb.ios"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/app-specifics/icon.png",
+        "backgroundColor": "#FF5A5F"
       },
-      "package": "com.github.icastillejogomez.fcmTravelGuide.android"
+      "package": "com.github.icastillejogomez.reactNativeAirbnb.android"
     },
     "plugins": [
       "expo-router",

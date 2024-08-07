@@ -1,5 +1,5 @@
-import { FCMTheme, theme } from '@/constants'
+import { AirbnbTheme, theme } from '@/constants'
 
-export function useTheme(): FCMTheme {
+export function useTheme(): AirbnbTheme {
   return theme
 }

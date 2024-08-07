@@ -1,6 +1,6 @@
-import { FCMPalette } from '../types'
+import { AirbnbPalette } from '../types'
 
-export const lightPalette: FCMPalette = {
+export const lightPalette: AirbnbPalette = {
   color: {
     primary: '#00de00',
     secondary: '#673ab7',

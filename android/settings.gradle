@@ -1,4 +1,4 @@
-rootProject.name = 'FCM Travel Guide'
+rootProject.name = 'Airbnb'
 
 dependencyResolutionManagement {
   versionCatalogs {

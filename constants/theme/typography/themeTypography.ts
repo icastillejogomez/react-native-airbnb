@@ -1,6 +1,6 @@
-import { FCMThemeTypography } from '../types'
+import { AirbnbThemeTypography } from '../types'
 
-export const themeTypography: FCMThemeTypography = {
+export const themeTypography: AirbnbThemeTypography = {
   fontFamily: 'SpaceMono-Regular',
   fontSize: {
     small: 12,

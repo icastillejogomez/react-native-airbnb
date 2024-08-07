@@ -1,7 +1,7 @@
 import { FC, PropsWithChildren, useCallback, useEffect, useState } from 'react'
 import { Slot } from 'expo-router'
 import * as SplashScreen from 'expo-splash-screen'
-import * as Font from 'expo-font'
+// import * as Font from 'expo-font'
 import { View } from 'react-native'
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
@@ -31,17 +31,16 @@ const apolloClient = new ApolloClient({
   cache: new InMemoryCache(),
 })
 
-const FCMTravelGuideAppLayout = () => {
+const AirbnbAppLayout = () => {
   // Declare hooks
   const [readyState, setReadyState] = useState<ReadyState>(initialReadyState)
 
   const loadFonts = useCallback(async () => {
-    await Font.loadAsync({
-      'SpaceMono-Regular': require('../assets/fonts/SpaceMono-Regular.ttf'),
-    })
-
+    // await Font.loadAsync({
+    //   'SpaceMono-Regular': require('../assets/fonts/SpaceMono-Regular.ttf'),
+    // })
     // wait 1 second
-    await new Promise((resolve) => setTimeout(resolve, 1000 * 1))
+    // await new Promise((resolve) => setTimeout(resolve, 1000 * 10))
   }, [])
 
   const hideSplashScreen = useCallback(async () => {
@@ -89,4 +88,4 @@ const FCMTravelGuideAppLayout = () => {
   )
 }
 
-export default FCMTravelGuideAppLayout
+export default AirbnbAppLayout

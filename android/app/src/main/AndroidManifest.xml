@@ -24,8 +24,8 @@
         <action android:name="android.intent.action.VIEW"/>
         <category android:name="android.intent.category.DEFAULT"/>
         <category android:name="android.intent.category.BROWSABLE"/>
-        <data android:scheme="fcm-travel-guide"/>
-        <data android:scheme="com.github.icastillejogomez.fcmTravelGuide.android"/>
+        <data android:scheme="airbnb"/>
+        <data android:scheme="com.github.icastillejogomez.reactNativeAirbnb.android"/>
       </intent-filter>
     </activity>
     <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" android:exported="false"/>

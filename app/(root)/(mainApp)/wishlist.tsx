@@ -2,7 +2,7 @@ import { useCallback, useEffect } from 'react'
 import { useNavigation } from 'expo-router'
 import { Alert, StyleSheet } from 'react-native'
 import { MainApplicationLayout } from '@/ui'
-import { FCMText } from '@/ui/native'
+import { AirbnbText } from '@/ui/native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 
 const WishlistScreen = () => {
@@ -18,7 +18,7 @@ const WishlistScreen = () => {
       headerRight: () => {
         return (
           <TouchableOpacity onPress={handlePressEdit} activeOpacity={0.8}>
-            <FCMText style={{ textDecorationLine: 'underline' }}>Edit</FCMText>
+            <AirbnbText style={{ textDecorationLine: 'underline' }}>Edit</AirbnbText>
           </TouchableOpacity>
         )
       },
@@ -27,7 +27,7 @@ const WishlistScreen = () => {
 
   return (
     <MainApplicationLayout style={styles.container}>
-      <FCMText>WishlistScreen</FCMText>
+      <AirbnbText>WishlistScreen</AirbnbText>
     </MainApplicationLayout>
   )
 }

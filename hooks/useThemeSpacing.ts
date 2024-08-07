@@ -1,7 +1,7 @@
-import { FCMThemeSpacing } from '@/constants'
+import { AirbnbThemeSpacing } from '@/constants'
 import { useTheme } from './useTheme'
 
-export const useThemeSpacing = (): FCMThemeSpacing => {
+export const useThemeSpacing = (): AirbnbThemeSpacing => {
   const theme = useTheme()
   return theme.spacing
 }

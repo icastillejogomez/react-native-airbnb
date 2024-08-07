@@ -83,13 +83,13 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace 'com.github.icastillejogomez.fcmTravelGuide.android'
+    namespace 'com.github.icastillejogomez.reactNativeAirbnb.android'
     defaultConfig {
-        applicationId 'com.github.icastillejogomez.fcmTravelGuide.android'
+        applicationId 'com.github.icastillejogomez.reactNativeAirbnb.android'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
-        versionName "1.0.0"
+        versionName "0.1.0"
     }
     signingConfigs {
         debug {

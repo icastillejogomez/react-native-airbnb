@@ -1,5 +1,5 @@
 export const appConfig = {
-  appName: 'FCM Travel Guide',
+  appName: 'Airbnb Travel Guide',
 
   ui: {
     tabBar: {

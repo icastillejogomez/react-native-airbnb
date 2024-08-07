@@ -1,8 +1,8 @@
-import { FCMThemeSpacing } from '../types'
+import { AirbnbThemeSpacing } from '../types'
 
 const UNIT = 8
 
-export const themeSpacing: FCMThemeSpacing = {
+export const themeSpacing: AirbnbThemeSpacing = {
   unit: UNIT,
   appHorizontalPadding: UNIT * 3,
   small: UNIT,

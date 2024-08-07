@@ -1,12 +1,12 @@
 import React from 'react'
 import { StyleSheet } from 'react-native'
 import { MainApplicationLayout } from '@/ui'
-import { FCMText } from '@/ui/native'
+import { AirbnbText } from '@/ui/native'
 
 const ProfileScreen = () => {
   return (
     <MainApplicationLayout style={styles.container}>
-      <FCMText>ProfileScreen</FCMText>
+      <AirbnbText>ProfileScreen</AirbnbText>
     </MainApplicationLayout>
   )
 }

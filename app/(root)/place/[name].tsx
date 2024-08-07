@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native'
 import React, { useEffect } from 'react'
 import { MainApplicationLayout } from '@/ui'
-import { FCMText } from '@/ui/native'
+import { AirbnbText } from '@/ui/native'
 import { useLocalSearchParams, useNavigation } from 'expo-router'
 
 const PlaceDetailsScreen = () => {
@@ -16,7 +16,7 @@ const PlaceDetailsScreen = () => {
 
   return (
     <MainApplicationLayout style={styles.container}>
-      <FCMText>Details page not implemented yet</FCMText>
+      <AirbnbText>Details page not implemented yet</AirbnbText>
     </MainApplicationLayout>
   )
 }

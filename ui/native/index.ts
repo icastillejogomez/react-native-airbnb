@@ -1,1 +1,1 @@
-export * from './FCMText'
+export * from './AirbnbText'

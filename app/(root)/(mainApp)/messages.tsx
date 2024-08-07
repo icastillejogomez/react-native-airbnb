@@ -1,12 +1,12 @@
 import React from 'react'
 import { StyleSheet } from 'react-native'
 import { MainApplicationLayout } from '@/ui'
-import { FCMText } from '@/ui/native'
+import { AirbnbText } from '@/ui/native'
 
 const MessagesScreen = () => {
   return (
     <MainApplicationLayout style={styles.container}>
-      <FCMText>MessagesScreen</FCMText>
+      <AirbnbText>MessagesScreen</AirbnbText>
     </MainApplicationLayout>
   )
 }
