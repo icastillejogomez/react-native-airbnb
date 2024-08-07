@@ -1,7 +1,7 @@
 module.exports = {
   cities: [
     {
-      id: 0,
+      id: 1,
       key: 'amsterdam',
       name: 'Amsterdam',
       nativeName: 'Amsterdam',
@@ -9,7 +9,7 @@ module.exports = {
       language: 'nl',
     },
     {
-      id: 1,
+      id: 2,
       key: 'athens',
       name: 'Athens',
       nativeName: 'Ἀθῆναι',
@@ -17,7 +17,7 @@ module.exports = {
       language: 'gr',
     },
     {
-      id: 2,
+      id: 3,
       key: 'barcelona',
       name: 'Barcelona',
       nativeName: 'Barcelona',
@@ -25,15 +25,15 @@ module.exports = {
       language: 'es',
     },
     {
-      id: 3,
+      id: 4,
       key: 'berlin',
       name: 'Berlin',
       nativeName: 'Berlin',
       currency: 'euro',
-      language: '',
+      language: 'de',
     },
     {
-      id: 4,
+      id: 5,
       key: 'dublin',
       name: 'Dublin',
       nativeName: 'Dublin',
@@ -41,7 +41,7 @@ module.exports = {
       language: 'en',
     },
     {
-      id: 5,
+      id: 6,
       key: 'lisbon',
       name: 'Lisbon',
       nativeName: 'Lisboa',
@@ -49,7 +49,7 @@ module.exports = {
       language: 'pt',
     },
     {
-      id: 6,
+      id: 7,
       key: 'london',
       name: 'London',
       nativeName: 'London',
@@ -57,7 +57,7 @@ module.exports = {
       language: 'en',
     },
     {
-      id: 7,
+      id: 8,
       key: 'paris',
       name: 'Paris',
       nativeName: 'Paris',
@@ -65,7 +65,7 @@ module.exports = {
       language: 'fr',
     },
     {
-      id: 8,
+      id: 9,
       key: 'rome',
       name: 'Rome',
       nativeName: 'Roma',
@@ -73,7 +73,7 @@ module.exports = {
       language: 'it',
     },
     {
-      id: 9,
+      id: 10,
       key: 'tokyo',
       name: 'Tokyo',
       nativeName: '東京都',

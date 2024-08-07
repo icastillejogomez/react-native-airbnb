@@ -4,3 +4,6 @@ dist
 ios
 _bundle
 android
+
+
+expo-env.d.ts
