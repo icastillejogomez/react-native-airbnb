@@ -1,0 +1,11 @@
+export type PlaceType =
+  | 'restaurant'
+  | 'monument'
+  | 'beach'
+  | 'car-rental'
+  | 'gas-station'
+  | 'hospital'
+  | 'park'
+  | 'hotel'
+  | 'party'
+  | 'shopping-bag'
