@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "react-native-airbnb",
-    "slug": "react-native-airbnb",
+    "slug": "airbnb",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -31,6 +31,15 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "9c5db540-e0f8-415b-8696-9ea2db90d084"
+      }
+    },
+    "owner": "nachoogoomez"
   }
 }
