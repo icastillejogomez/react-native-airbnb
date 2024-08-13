@@ -10,7 +10,7 @@
     "web": "expo start --web",
     "typecheck": "tsc --noEmit",
     "test": "npm run test:unit",
-    "test:unit": "jest",
+    "test:unit": "jest --passWithNoTests",
     "test:watch": "jest --watchAll",
     "lint": "eslint .",
     "prepare": "husky"
