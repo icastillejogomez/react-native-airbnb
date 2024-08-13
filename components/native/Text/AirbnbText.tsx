@@ -11,6 +11,7 @@ export type AirbnbTextColor = keyof Palette['text']
 export type AirbnbTextSize = 'inherit' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl'
 export type AirbnbTextWeight = 'default' | 'bold' | '100' | '200' | '300' | '400' | '500' | '600' | '700' | '800' | '900'
 export type AirbnbTextDecoration = 'none' | 'underline' | 'line-through' | 'underline line-through'
+export type AirbnbTextAlign = 'auto' | 'left' | 'center' | 'right' | 'justify'
 
 export type AirbnbTextProps = TextProps & {
   variant?: AirbnbTextVariant
@@ -18,7 +19,9 @@ export type AirbnbTextProps = TextProps & {
   size?: AirbnbTextSize
   weight?: AirbnbTextWeight
   decoration?: AirbnbTextDecoration
+  align?: AirbnbTextAlign
   bold?: boolean
+  italic?: boolean
   avoidGradient?: boolean
 }
 
@@ -27,7 +30,7 @@ function isLinearGradient(color: Palette['text'][keyof Palette['text']]): color 
 }
 
 const AirbnbText: FC<AirbnbTextProps> = (props) => {
-  const { children, style: parentStyle, color, size, weight, variant, bold, decoration, avoidGradient, ...rest } = props
+  const { children, style: parentStyle, color, size, weight, variant, bold, decoration, avoidGradient, italic, align, ...rest } = props
 
   const theme = useTheme()
   const isGradientColor = useMemo(() => isLinearGradient(theme.palette.text[color || 'primary']), [theme, color])
@@ -69,12 +72,26 @@ const AirbnbText: FC<AirbnbTextProps> = (props) => {
       styles.baseStyles.defaults,
       !isGradientColor || avoidGradient ? { color: themeColor as Color } : {},
       { ...styles.variants[variant || 'body1'] },
-      { ...styles.weights[weight || bold ? 'bold' : 'default'] },
+      variant === 'body1' || variant === 'body2' || variant === 'caption'
+        ? italic
+          ? { ...styles.weightItalic['400'] }
+          : { ...styles.weightsRegular['400'] }
+        : variant === 'subtitle1' || variant === 'subtitle2' || variant === 'overline'
+          ? italic
+            ? { ...styles.weightItalic['500'] }
+            : { ...styles.weightsRegular['500'] }
+          : italic
+            ? { ...styles.weightItalic['400'] }
+            : { ...styles.weightsRegular['400'] },
+      italic
+        ? { ...styles.weightItalic[bold ? 'bold' : weight || 'default'] }
+        : { ...styles.weightsRegular[bold ? 'bold' : weight || 'default'] },
       size ? { ...styles.sizes[size] } : {},
       { ...styles.decorations[decoration || 'none'] },
+      { ...styles.alignments[align || 'auto'] },
       parentStyle || {},
     ]
-  }, [themeColor, isGradientColor, avoidGradient, parentStyle, size, weight, variant, bold, decoration])
+  }, [themeColor, isGradientColor, avoidGradient, parentStyle, size, weight, variant, bold, italic, decoration, align])
 
   if (isGradientColor && !avoidGradient) {
     const c = themeColor as LinearGradient

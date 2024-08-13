@@ -1,5 +1,5 @@
 import { TextStyle, StyleSheet } from 'react-native'
-import { AirbnbTextDecoration, AirbnbTextSize, AirbnbTextVariant, AirbnbTextWeight } from './AirbnbText'
+import { AirbnbTextAlign, AirbnbTextDecoration, AirbnbTextSize, AirbnbTextVariant, AirbnbTextWeight } from './AirbnbText'
 
 export const decorations = StyleSheet.create<Record<AirbnbTextDecoration, TextStyle>>({
   none: {},
@@ -17,68 +17,100 @@ export const decorations = StyleSheet.create<Record<AirbnbTextDecoration, TextSt
 export const variants = StyleSheet.create<Record<AirbnbTextVariant, TextStyle>>({
   body1: {
     fontSize: 16,
-    fontWeight: '400',
     lineHeight: 24, // 16 * 1.5
   },
   body2: {
     fontSize: 15,
-    fontWeight: '400',
     lineHeight: 21, // 15 * 1.4
   },
   subtitle1: {
     fontSize: 16,
-    fontWeight: '500',
     lineHeight: 28, // 16 * 1.75
   },
   subtitle2: {
     fontSize: 14,
-    fontWeight: '500',
     lineHeight: 22, // 14 * 1.57
   },
   caption: {
     fontSize: 12,
-    fontWeight: '400',
     lineHeight: 20, // 12 * 1.66
   },
   overline: {
     fontSize: 12,
-    fontWeight: '500',
     lineHeight: 32, // 12 * 2.66
     textTransform: 'uppercase',
   },
 })
 
-export const weights = StyleSheet.create<Record<AirbnbTextWeight, TextStyle>>({
-  default: {},
+export const weightsRegular = StyleSheet.create<Record<AirbnbTextWeight, TextStyle>>({
+  default: {
+    fontFamily: 'Montserrat-Regular',
+  },
   bold: {
-    fontWeight: 'bold',
+    fontFamily: 'Montserrat-Bold',
   },
   '100': {
-    fontWeight: '100',
+    fontFamily: 'Montserrat-Thin',
   },
   '200': {
-    fontWeight: '200',
+    fontFamily: 'Montserrat-ExtraLight',
   },
   '300': {
-    fontWeight: '300',
+    fontFamily: 'Montserrat-Light',
   },
   '400': {
-    fontWeight: '400',
+    fontFamily: 'Montserrat-Regular',
   },
   '500': {
-    fontWeight: '500',
+    fontFamily: 'Montserrat-Medium',
   },
   '600': {
-    fontWeight: '600',
+    fontFamily: 'Montserrat-SemiBold',
   },
   '700': {
-    fontWeight: '700',
+    fontFamily: 'Montserrat-Bold',
   },
   '800': {
-    fontWeight: '800',
+    fontFamily: 'Montserrat-ExtraBold',
   },
   '900': {
-    fontWeight: '900',
+    fontFamily: 'Montserrat-Black',
+  },
+})
+
+export const weightItalic = StyleSheet.create<Record<AirbnbTextWeight, TextStyle>>({
+  default: {
+    fontFamily: 'Montserrat-Italic',
+  },
+  bold: {
+    fontFamily: 'Montserrat-BoldItalic',
+  },
+  '100': {
+    fontFamily: 'Montserrat-ThinItalic',
+  },
+  '200': {
+    fontFamily: 'Montserrat-ExtraLightItalic',
+  },
+  '300': {
+    fontFamily: 'Montserrat-LightItalic',
+  },
+  '400': {
+    fontFamily: 'Montserrat-Italic',
+  },
+  '500': {
+    fontFamily: 'Montserrat-MediumItalic',
+  },
+  '600': {
+    fontFamily: 'Montserrat-SemiBoldItalic',
+  },
+  '700': {
+    fontFamily: 'Montserrat-BoldItalic',
+  },
+  '800': {
+    fontFamily: 'Montserrat-ExtraBoldItalic',
+  },
+  '900': {
+    fontFamily: 'Montserrat-BlackItalic',
   },
 })
 
@@ -110,6 +142,24 @@ export const sizes = StyleSheet.create<Record<AirbnbTextSize, TextStyle>>({
   xxl: {
     fontSize: 24,
     lineHeight: 33.6, // 24 * 1.4
+  },
+})
+
+export const alignments = StyleSheet.create<Record<AirbnbTextAlign, TextStyle>>({
+  auto: {
+    textAlign: 'auto',
+  },
+  left: {
+    textAlign: 'left',
+  },
+  center: {
+    textAlign: 'center',
+  },
+  right: {
+    textAlign: 'right',
+  },
+  justify: {
+    textAlign: 'justify',
   },
 })
 
