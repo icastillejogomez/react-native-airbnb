@@ -1,0 +1,1937 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AirbnbText alignments renders with align="auto" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  auto
+</Text>
+`;
+
+exports[`AirbnbText alignments renders with align="center" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+      },
+      {},
+      {},
+      {
+        "textAlign": "center",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  center
+</Text>
+`;
+
+exports[`AirbnbText alignments renders with align="justify" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+      },
+      {},
+      {},
+      {
+        "textAlign": "justify",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  justify
+</Text>
+`;
+
+exports[`AirbnbText alignments renders with align="left" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+      },
+      {},
+      {},
+      {
+        "textAlign": "left",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  left
+</Text>
+`;
+
+exports[`AirbnbText alignments renders with align="right" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+      },
+      {},
+      {},
+      {
+        "textAlign": "right",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  right
+</Text>
+`;
+
+exports[`AirbnbText decorations renders with decoration="line-through" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+      },
+      {},
+      {
+        "textDecorationLine": "line-through",
+      },
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  line-through
+</Text>
+`;
+
+exports[`AirbnbText decorations renders with decoration="none" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  none
+</Text>
+`;
+
+exports[`AirbnbText decorations renders with decoration="underline line-through" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+      },
+      {},
+      {
+        "textDecorationLine": "underline line-through",
+      },
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  underline line-through
+</Text>
+`;
+
+exports[`AirbnbText decorations renders with decoration="underline" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+      },
+      {},
+      {
+        "textDecorationLine": "underline",
+      },
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  underline
+</Text>
+`;
+
+exports[`AirbnbText overwrites bold overwrite over given weight 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Bold",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  This text should be light regular
+</Text>
+`;
+
+exports[`AirbnbText overwrites parent style overwrites alignment 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+      },
+      {},
+      {},
+      {
+        "textAlign": "left",
+      },
+      {
+        "textAlign": "right",
+      },
+      {},
+    ]
+  }
+  testID="text"
+>
+  Some text here
+</Text>
+`;
+
+exports[`AirbnbText overwrites parent style overwrites decoration 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+      },
+      {},
+      {
+        "textDecorationLine": "underline",
+      },
+      {
+        "textAlign": "auto",
+      },
+      {
+        "textDecorationLine": "none",
+      },
+      {},
+    ]
+  }
+  testID="text"
+>
+  Some text here
+</Text>
+`;
+
+exports[`AirbnbText overwrites parent style overwrites font size 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+      },
+      {
+        "fontSize": 14,
+        "lineHeight": 19.6,
+      },
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {
+        "fontSize": 100,
+      },
+      {},
+    ]
+  }
+>
+  This text should be light regular
+</Text>
+`;
+
+exports[`AirbnbText overwrites parent style overwrites font style through injected styles overwrite over italic prop with specific weight 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-MediumItalic",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-BoldItalic",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {
+        "fontFamily": "Montserrat-Bold",
+      },
+    ]
+  }
+  testID="text"
+>
+  Some text here
+</Text>
+`;
+
+exports[`AirbnbText overwrites parent style overwrites font style through injected styles overwrite over italic prop without specific weight 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-MediumItalic",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-MediumItalic",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {
+        "fontFamily": "Montserrat-Regular",
+      },
+    ]
+  }
+  testID="text"
+>
+  Some text here
+</Text>
+`;
+
+exports[`AirbnbText overwrites parent style overwrites font weight and font style through injected styles overwrite over weight and italic props 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-MediumItalic",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-BoldItalic",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {
+        "fontFamily": "Montserrat-Regular",
+      },
+    ]
+  }
+  testID="text"
+>
+  Some text here
+</Text>
+`;
+
+exports[`AirbnbText overwrites parent style overwrites font weight through injected styles overwrite over weight prop 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Regular",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {
+        "fontFamily": "Montserrat-Light",
+      },
+    ]
+  }
+  testID="text"
+>
+  Some text here
+</Text>
+`;
+
+exports[`AirbnbText renders with Montserrat font 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  Hello world
+</Text>
+`;
+
+exports[`AirbnbText renders with children 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  Hello world
+</Text>
+`;
+
+exports[`AirbnbText renders without crashing 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+/>
+`;
+
+exports[`AirbnbText shortcuts renders with bold 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Bold",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  bold
+</Text>
+`;
+
+exports[`AirbnbText shortcuts renders with bold and italic 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-MediumItalic",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-BoldItalic",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  bold italic
+</Text>
+`;
+
+exports[`AirbnbText shortcuts renders with italic 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-MediumItalic",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-MediumItalic",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  italic
+</Text>
+`;
+
+exports[`AirbnbText sizes renders with size="inherit" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+      },
+      {
+        "fontSize": undefined,
+        "lineHeight": undefined,
+      },
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  inherit
+</Text>
+`;
+
+exports[`AirbnbText sizes renders with size="l" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+      },
+      {
+        "fontSize": 18,
+        "lineHeight": 25.2,
+      },
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  l
+</Text>
+`;
+
+exports[`AirbnbText sizes renders with size="m" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+      },
+      {
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  m
+</Text>
+`;
+
+exports[`AirbnbText sizes renders with size="s" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+      },
+      {
+        "fontSize": 14,
+        "lineHeight": 19.6,
+      },
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  s
+</Text>
+`;
+
+exports[`AirbnbText sizes renders with size="xl" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+      },
+      {
+        "fontSize": 20,
+        "lineHeight": 28,
+      },
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  xl
+</Text>
+`;
+
+exports[`AirbnbText sizes renders with size="xs" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+      },
+      {
+        "fontSize": 12,
+        "lineHeight": 16,
+      },
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  xs
+</Text>
+`;
+
+exports[`AirbnbText sizes renders with size="xxl" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+      },
+      {
+        "fontSize": 24,
+        "lineHeight": 33.6,
+      },
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  xxl
+</Text>
+`;
+
+exports[`AirbnbText variants renders with variant="body1" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  body1
+</Text>
+`;
+
+exports[`AirbnbText variants renders with variant="body2" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 15,
+        "lineHeight": 21,
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  body2
+</Text>
+`;
+
+exports[`AirbnbText variants renders with variant="caption" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 12,
+        "lineHeight": 20,
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  caption
+</Text>
+`;
+
+exports[`AirbnbText variants renders with variant="overline" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-SemiBold",
+        "fontSize": 12,
+        "lineHeight": 32,
+        "textTransform": "uppercase",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  overline
+</Text>
+`;
+
+exports[`AirbnbText variants renders with variant="subtitle1" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-SemiBold",
+        "fontSize": 16,
+        "lineHeight": 28,
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  subtitle1
+</Text>
+`;
+
+exports[`AirbnbText variants renders with variant="subtitle2" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-SemiBold",
+        "fontSize": 14,
+        "lineHeight": 22,
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  subtitle2
+</Text>
+`;
+
+exports[`AirbnbText weights italic font family renders with italic weight="{ weight: '100', fontFamily: 'Montserrat-ThinItalic' }" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-MediumItalic",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-ThinItalic",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  100
+</Text>
+`;
+
+exports[`AirbnbText weights italic font family renders with italic weight="{ weight: '200', fontFamily: 'Montserrat-ExtraLightItalic' }" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-MediumItalic",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-ExtraLightItalic",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  200
+</Text>
+`;
+
+exports[`AirbnbText weights italic font family renders with italic weight="{ weight: '300', fontFamily: 'Montserrat-LightItalic' }" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-MediumItalic",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-LightItalic",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  300
+</Text>
+`;
+
+exports[`AirbnbText weights italic font family renders with italic weight="{ weight: '400', fontFamily: 'Montserrat-Italic' }" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-MediumItalic",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Italic",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  400
+</Text>
+`;
+
+exports[`AirbnbText weights italic font family renders with italic weight="{ weight: '500', fontFamily: 'Montserrat-MediumItalic' }" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-MediumItalic",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-MediumItalic",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  500
+</Text>
+`;
+
+exports[`AirbnbText weights italic font family renders with italic weight="{ weight: '600', fontFamily: 'Montserrat-SemiBoldItalic' }" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-MediumItalic",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-SemiBoldItalic",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  600
+</Text>
+`;
+
+exports[`AirbnbText weights italic font family renders with italic weight="{ weight: '700', fontFamily: 'Montserrat-BoldItalic' }" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-MediumItalic",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-BoldItalic",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  700
+</Text>
+`;
+
+exports[`AirbnbText weights italic font family renders with italic weight="{ weight: '800', fontFamily: 'Montserrat-ExtraBoldItalic' }" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-MediumItalic",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-ExtraBoldItalic",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  800
+</Text>
+`;
+
+exports[`AirbnbText weights italic font family renders with italic weight="{ weight: '900', fontFamily: 'Montserrat-BlackItalic' }" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-MediumItalic",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-BlackItalic",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  900
+</Text>
+`;
+
+exports[`AirbnbText weights italic font family renders with italic weight="{ weight: 'bold', fontFamily: 'Montserrat-BoldItalic' }" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-MediumItalic",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-BoldItalic",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  bold
+</Text>
+`;
+
+exports[`AirbnbText weights italic font family renders with italic weight="{ weight: 'default', fontFamily: 'Montserrat-MediumItalic' }" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-MediumItalic",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {},
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  default
+</Text>
+`;
+
+exports[`AirbnbText weights regular font family renders with regular weight="{ weight: '100', fontFamily: 'Montserrat-Thin' }" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Thin",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  100
+</Text>
+`;
+
+exports[`AirbnbText weights regular font family renders with regular weight="{ weight: '200', fontFamily: 'Montserrat-ExtraLight' }" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-ExtraLight",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  200
+</Text>
+`;
+
+exports[`AirbnbText weights regular font family renders with regular weight="{ weight: '300', fontFamily: 'Montserrat-Light' }" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Light",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  300
+</Text>
+`;
+
+exports[`AirbnbText weights regular font family renders with regular weight="{ weight: '400', fontFamily: 'Montserrat-Regular' }" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Regular",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  400
+</Text>
+`;
+
+exports[`AirbnbText weights regular font family renders with regular weight="{ weight: '500', fontFamily: 'Montserrat-Medium' }" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  500
+</Text>
+`;
+
+exports[`AirbnbText weights regular font family renders with regular weight="{ weight: '600', fontFamily: 'Montserrat-SemiBold' }" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-SemiBold",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  600
+</Text>
+`;
+
+exports[`AirbnbText weights regular font family renders with regular weight="{ weight: '700', fontFamily: 'Montserrat-Bold' }" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Bold",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  700
+</Text>
+`;
+
+exports[`AirbnbText weights regular font family renders with regular weight="{ weight: '800', fontFamily: 'Montserrat-ExtraBold' }" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-ExtraBold",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  800
+</Text>
+`;
+
+exports[`AirbnbText weights regular font family renders with regular weight="{ weight: '900', fontFamily: 'Montserrat-Black' }" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Black",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  900
+</Text>
+`;
+
+exports[`AirbnbText weights regular font family renders with regular weight="{ weight: 'bold', fontFamily: 'Montserrat-Bold' }" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Bold",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  bold
+</Text>
+`;
+
+exports[`AirbnbText weights regular font family renders with regular weight="{ weight: 'default', fontFamily: 'Montserrat-Medium' }" 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {},
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+>
+  default
+</Text>
+`;
+
+exports[`AirbnbText wrapping max text length 1`] = `
+<Text
+  style={
+    [
+      {
+        "fontSize": 16,
+      },
+      {
+        "color": "#222222",
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+      {
+        "fontFamily": "Montserrat-Medium",
+      },
+      {},
+      {},
+      {
+        "textAlign": "auto",
+      },
+      {},
+      {},
+    ]
+  }
+  testID="text"
+>
+  Lorem ipsum dolor sit amet ...
+</Text>
+`;

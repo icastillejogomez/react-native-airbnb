@@ -43,8 +43,8 @@ const variants = StyleSheet.create<Record<AirbnbTextVariant, TextStyle>>({
 })
 
 export const weightsRegular = StyleSheet.create<Record<AirbnbTextWeight, TextStyle>>({
-  default: {
-    fontFamily: 'Montserrat-Regular',
+  normal: {
+    fontFamily: 'Montserrat-Medium',
   },
   bold: {
     fontFamily: 'Montserrat-Bold',
@@ -79,8 +79,8 @@ export const weightsRegular = StyleSheet.create<Record<AirbnbTextWeight, TextSty
 })
 
 export const weightsItalic = StyleSheet.create<Record<AirbnbTextWeight, TextStyle>>({
-  default: {
-    fontFamily: 'Montserrat-Italic',
+  normal: {
+    fontFamily: 'Montserrat-MediumItalic',
   },
   bold: {
     fontFamily: 'Montserrat-BoldItalic',
@@ -117,54 +117,54 @@ export const weightsItalic = StyleSheet.create<Record<AirbnbTextWeight, TextStyl
 export const variantsRegular = StyleSheet.create<Record<AirbnbTextVariant, TextStyle>>({
   body1: {
     ...variants.body1,
-    ...weightsRegular['400'],
+    ...weightsRegular['500'],
   },
   body2: {
     ...variants.body2,
-    ...weightsRegular['400'],
+    ...weightsRegular['500'],
   },
   subtitle1: {
     ...variants.subtitle1,
-    ...weightsRegular['500'],
+    ...weightsRegular['600'],
   },
   subtitle2: {
     ...variants.subtitle2,
-    ...weightsRegular['500'],
+    ...weightsRegular['600'],
   },
   caption: {
     ...variants.caption,
-    ...weightsRegular['400'],
+    ...weightsRegular['500'],
   },
   overline: {
     ...variants.overline,
-    ...weightsRegular['500'],
+    ...weightsRegular['600'],
   },
 })
 
 export const variantsItalic = StyleSheet.create<Record<AirbnbTextVariant, TextStyle>>({
   body1: {
     ...variants.body1,
-    ...weightsItalic['400'],
+    ...weightsItalic['500'],
   },
   body2: {
     ...variants.body2,
-    ...weightsItalic['400'],
+    ...weightsItalic['500'],
   },
   subtitle1: {
     ...variants.subtitle1,
-    ...weightsItalic['500'],
+    ...weightsItalic['600'],
   },
   subtitle2: {
     ...variants.subtitle2,
-    ...weightsItalic['500'],
+    ...weightsItalic['600'],
   },
   caption: {
     ...variants.caption,
-    ...weightsItalic['400'],
+    ...weightsItalic['500'],
   },
   overline: {
     ...variants.overline,
-    ...weightsItalic['500'],
+    ...weightsItalic['600'],
   },
 })
 
