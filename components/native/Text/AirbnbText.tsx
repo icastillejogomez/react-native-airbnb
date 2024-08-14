@@ -71,20 +71,9 @@ const AirbnbText: FC<AirbnbTextProps> = (props) => {
     return [
       styles.baseStyles.defaults,
       !isGradientColor || avoidGradient ? { color: themeColor as Color } : {},
-      { ...styles.variants[variant || 'body1'] },
-      variant === 'body1' || variant === 'body2' || variant === 'caption'
-        ? italic
-          ? { ...styles.weightItalic['400'] }
-          : { ...styles.weightsRegular['400'] }
-        : variant === 'subtitle1' || variant === 'subtitle2' || variant === 'overline'
-          ? italic
-            ? { ...styles.weightItalic['500'] }
-            : { ...styles.weightsRegular['500'] }
-          : italic
-            ? { ...styles.weightItalic['400'] }
-            : { ...styles.weightsRegular['400'] },
+      italic ? { ...styles.variantsRegular[variant || 'body1'] } : { ...styles.variantsItalic[variant || 'body1'] },
       italic
-        ? { ...styles.weightItalic[bold ? 'bold' : weight || 'default'] }
+        ? { ...styles.weightsItalic[bold ? 'bold' : weight || 'default'] }
         : { ...styles.weightsRegular[bold ? 'bold' : weight || 'default'] },
       size ? { ...styles.sizes[size] } : {},
       { ...styles.decorations[decoration || 'none'] },

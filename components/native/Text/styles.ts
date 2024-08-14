@@ -14,7 +14,7 @@ export const decorations = StyleSheet.create<Record<AirbnbTextDecoration, TextSt
   },
 })
 
-export const variants = StyleSheet.create<Record<AirbnbTextVariant, TextStyle>>({
+const variants = StyleSheet.create<Record<AirbnbTextVariant, TextStyle>>({
   body1: {
     fontSize: 16,
     lineHeight: 24, // 16 * 1.5
@@ -78,7 +78,7 @@ export const weightsRegular = StyleSheet.create<Record<AirbnbTextWeight, TextSty
   },
 })
 
-export const weightItalic = StyleSheet.create<Record<AirbnbTextWeight, TextStyle>>({
+export const weightsItalic = StyleSheet.create<Record<AirbnbTextWeight, TextStyle>>({
   default: {
     fontFamily: 'Montserrat-Italic',
   },
@@ -111,6 +111,60 @@ export const weightItalic = StyleSheet.create<Record<AirbnbTextWeight, TextStyle
   },
   '900': {
     fontFamily: 'Montserrat-BlackItalic',
+  },
+})
+
+export const variantsRegular = StyleSheet.create<Record<AirbnbTextVariant, TextStyle>>({
+  body1: {
+    ...variants.body1,
+    ...weightsRegular['400'],
+  },
+  body2: {
+    ...variants.body2,
+    ...weightsRegular['400'],
+  },
+  subtitle1: {
+    ...variants.subtitle1,
+    ...weightsRegular['500'],
+  },
+  subtitle2: {
+    ...variants.subtitle2,
+    ...weightsRegular['500'],
+  },
+  caption: {
+    ...variants.caption,
+    ...weightsRegular['400'],
+  },
+  overline: {
+    ...variants.overline,
+    ...weightsRegular['500'],
+  },
+})
+
+export const variantsItalic = StyleSheet.create<Record<AirbnbTextVariant, TextStyle>>({
+  body1: {
+    ...variants.body1,
+    ...weightsItalic['400'],
+  },
+  body2: {
+    ...variants.body2,
+    ...weightsItalic['400'],
+  },
+  subtitle1: {
+    ...variants.subtitle1,
+    ...weightsItalic['500'],
+  },
+  subtitle2: {
+    ...variants.subtitle2,
+    ...weightsItalic['500'],
+  },
+  caption: {
+    ...variants.caption,
+    ...weightsItalic['400'],
+  },
+  overline: {
+    ...variants.overline,
+    ...weightsItalic['500'],
   },
 })
 
