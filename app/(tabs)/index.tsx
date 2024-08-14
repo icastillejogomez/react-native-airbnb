@@ -8,6 +8,10 @@ const variants = ['body1', 'body2', 'subtitle1', 'subtitle2', 'caption', 'overli
 const Index = () => {
   return (
     <ScrollView contentContainerStyle={{ flex: 1, alignItems: 'center', paddingVertical: 32 }}>
+      <AirbnbText color="primary-core" style={{ fontSize: 32, lineHeight: 40 }} bold>
+        Airbnb
+      </AirbnbText>
+
       <AirbnbText size="l">
         <AirbnbText color="primary-core" size="inherit">
           Airbnb
