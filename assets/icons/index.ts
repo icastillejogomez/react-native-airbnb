@@ -3,7 +3,7 @@ export const iconsSources = {
   wishlist: require('./wishlist.svg'),
   explore: require('./explore.svg'),
   trips: require('./trips.svg'),
-  messages: require('./messages.svg'),
+  messages: require('./places/beach.jpg'),
   profile: require('./profile.svg'),
   closeCross: require('./close-cross.svg'),
 }

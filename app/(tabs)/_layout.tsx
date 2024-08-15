@@ -1,9 +1,8 @@
 import React from 'react'
 import { Tabs } from 'expo-router'
-import { Image } from 'expo-image'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { usePalette } from '@/theme'
-import { iconsSources } from '@/assets/icons'
+import { AirbnbTabBar } from '@/components'
 
 export default function TabLayout() {
   const palette = usePalette()
@@ -13,6 +12,7 @@ export default function TabLayout() {
     <Tabs
       safeAreaInsets={insets}
       initialRouteName="index"
+      tabBar={(props) => <AirbnbTabBar {...props} />}
       screenOptions={{
         tabBarActiveTintColor: palette.icon['primary-core'].plainColor,
         tabBarInactiveTintColor: palette.icon.secondary,
@@ -22,45 +22,21 @@ export default function TabLayout() {
         options={{
           title: 'Explore',
           headerShown: false,
-          tabBarIcon: ({ color }) => (
-            <Image
-              source={iconsSources.search}
-              style={{ width: 24, height: 24 }}
-              tintColor={color}
-              contentFit="cover"
-              cachePolicy={'memory-disk'}
-            />
-          ),
+          // tabBarIcon: ({ color }) => <TabBarIcon tintColor={color} icon="explore" />,
         }}
       />
       <Tabs.Screen
         name="wishlist"
         options={{
           title: 'Wishlist',
-          tabBarIcon: ({ color }) => (
-            <Image
-              source={iconsSources.wishlist}
-              style={{ width: 24, height: 24 }}
-              tintColor={color}
-              contentFit="cover"
-              cachePolicy={'memory-disk'}
-            />
-          ),
+          // tabBarIcon: ({ color }) => <TabBarIcon tintColor={color} icon="wishlist" />,
         }}
       />
       <Tabs.Screen
         name="trips"
         options={{
           title: 'Trips',
-          tabBarIcon: ({ color }) => (
-            <Image
-              source={iconsSources.trips}
-              style={{ width: 24, height: 24 }}
-              tintColor={color}
-              contentFit="cover"
-              cachePolicy={'memory-disk'}
-            />
-          ),
+          // tabBarIcon: ({ color }) => <TabBarIcon tintColor={color} icon="trips" />,
         }}
       />
       <Tabs.Screen
@@ -68,30 +44,14 @@ export default function TabLayout() {
         options={{
           title: 'Messages',
           headerTitle: 'Inbox',
-          tabBarIcon: ({ color }) => (
-            <Image
-              source={iconsSources.messages}
-              style={{ width: 24, height: 24 }}
-              tintColor={color}
-              contentFit="cover"
-              cachePolicy={'memory-disk'}
-            />
-          ),
+          // tabBarIcon: ({ color }) => <TabBarIcon tintColor={color} icon="messages" />,
         }}
       />
       <Tabs.Screen
         name="profile"
         options={{
           title: 'Profile',
-          tabBarIcon: ({ color }) => (
-            <Image
-              source={iconsSources.profile}
-              style={{ width: 24, height: 24 }}
-              tintColor={color}
-              contentFit="cover"
-              cachePolicy={'memory-disk'}
-            />
-          ),
+          // tabBarIcon: ({ color }) => <TabBarIcon tintColor={color} icon="profile" />,
         }}
       />
     </Tabs>
