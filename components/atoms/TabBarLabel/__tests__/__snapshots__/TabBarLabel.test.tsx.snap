@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TabBarLabel should match snapshot 1`] = `
+<RNCMaskedView>
+  <View
+    pointerEvents="none"
+    style={
+      {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "fontSize": 16,
+          },
+          {},
+          {
+            "fontFamily": "Montserrat-Medium",
+            "fontSize": 12,
+            "lineHeight": 20,
+          },
+          {
+            "fontFamily": "Montserrat-SemiBold",
+          },
+          {},
+          {},
+          {
+            "textAlign": "auto",
+          },
+          {
+            "fontSize": 10,
+          },
+          {},
+        ]
+      }
+    >
+      Explore
+    </Text>
+  </View>
+  <ViewManagerAdapter_ExpoLinearGradient
+    colors={
+      [
+        4293271117,
+        4293074015,
+        4292281446,
+      ]
+    }
+    endPoint={
+      [
+        1,
+        0.5,
+      ]
+    }
+    locations={
+      [
+        0,
+        0.5,
+        1,
+      ]
+    }
+    startPoint={
+      [
+        0,
+        0.5,
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          [
+            {
+              "fontSize": 16,
+            },
+            {},
+            {
+              "fontFamily": "Montserrat-Medium",
+              "fontSize": 12,
+              "lineHeight": 20,
+            },
+            {
+              "fontFamily": "Montserrat-SemiBold",
+            },
+            {},
+            {},
+            {
+              "textAlign": "auto",
+            },
+            {
+              "fontSize": 10,
+            },
+            {},
+          ],
+          {
+            "opacity": 0,
+          },
+        ]
+      }
+    >
+      Explore
+    </Text>
+  </ViewManagerAdapter_ExpoLinearGradient>
+</RNCMaskedView>
+`;

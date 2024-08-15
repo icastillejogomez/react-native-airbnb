@@ -3,9 +3,9 @@ import { View, TouchableOpacity } from 'react-native'
 
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs'
 import { usePalette } from '@/theme'
-import { AirbnbText } from '@/components/native'
 import styles from './styles'
 import { TabBarIcon } from '@/components/atoms'
+import { TabBarItem } from '@/components/molecules'
 
 export type AirbnbTabBarProps = BottomTabBarProps
 
@@ -66,16 +66,7 @@ const AirbnbTabBar: FC<AirbnbTabBarProps> = ({ state, descriptors, navigation, i
 
         return (
           <TouchableOpacity key={`tab-bar-${route.name}`} activeOpacity={1} onPress={onPress} style={styles.item}>
-            <>
-              {icon}
-              <AirbnbText
-                variant="caption"
-                weight={isFocused ? '600' : '400'}
-                color={isFocused ? 'primary-core' : 'primary'}
-                style={styles.label}>
-                {label}
-              </AirbnbText>
-            </>
+            <TabBarItem icon={icon} isFocused={isFocused} label={label} />
           </TouchableOpacity>
         )
       })}
