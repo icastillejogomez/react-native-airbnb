@@ -2,7 +2,8 @@ import { useFonts } from 'expo-font'
 import { Stack } from 'expo-router'
 import * as SplashScreen from 'expo-splash-screen'
 import { useEffect } from 'react'
-import 'react-native-reanimated'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
+import { Platform } from 'react-native'
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -10,9 +11,9 @@ export {
 } from 'expo-router'
 
 // eslint-disable-next-line camelcase
-export const unstable_settings = {
-  initialRouteName: '(tabs)',
-}
+// export const unstable_settings = {
+//   initialRouteName: '(tabs)',
+// }
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync()
@@ -59,8 +60,20 @@ export default function RootLayout() {
 
 function RootLayoutNav() {
   return (
-    <Stack>
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-    </Stack>
+    <SafeAreaProvider>
+      <Stack initialRouteName="(tabs)">
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen
+          name="(auth)"
+          options={{
+            headerShown: false,
+            presentation: 'modal',
+            animation: Platform.OS === 'ios' ? 'default' : 'fade',
+            gestureDirection: 'vertical',
+            gestureEnabled: false,
+          }}
+        />
+      </Stack>
+    </SafeAreaProvider>
   )
 }

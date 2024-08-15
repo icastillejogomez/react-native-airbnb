@@ -54,6 +54,12 @@ export const theme: AirbnbTheme = {
     },
     icon: {
       primary: '#222222',
+      'primary-core': {
+        direction: 'to right',
+        colors: ['#E61E4D', '#E31C5F', '#D70466'],
+        locations: [0, 0.5, 1],
+        plainColor: '#E31C5F',
+      },
       'primary-disabled': '#DDDDDD',
       'primary-error': '#C13515',
       'primary-inverse': '#FFFFFF',

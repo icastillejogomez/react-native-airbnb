@@ -1,64 +1,18 @@
-import { ScrollView, View } from 'react-native'
 import React from 'react'
+import { ScrollView } from 'react-native'
 import { AirbnbText } from '@/components'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
-const weights = ['100', '200', '300', '400', '500', '600', '700', '800', '900'] as const
-const variants = ['body1', 'body2', 'subtitle1', 'subtitle2', 'caption', 'overline'] as const
-
-const Index = () => {
+const ExploreRouterScreen = () => {
   return (
-    <ScrollView contentContainerStyle={{ flex: 1, alignItems: 'center', paddingVertical: 32 }}>
-      <AirbnbText color="primary-core" style={{ fontSize: 32, lineHeight: 40 }} bold>
-        Airbnb
-      </AirbnbText>
-
-      <AirbnbText size="l">
-        <AirbnbText color="primary-core" size="inherit">
+    <SafeAreaView style={{ flex: 1 }}>
+      <ScrollView contentContainerStyle={{ flex: 1, alignItems: 'center', justifyContent: 'center', paddingVertical: 32 }}>
+        <AirbnbText color="primary-core" style={{ fontSize: 32, lineHeight: 40 }} bold>
           Airbnb
         </AirbnbText>
-        {' is super cool'}
-      </AirbnbText>
-
-      <View style={{ flexDirection: 'row', justifyContent: 'space-between', gap: 24 }}>
-        <View>
-          <AirbnbText size="l" align="center">
-            Default
-          </AirbnbText>
-          <AirbnbText size="l" bold align="center">
-            Bold
-          </AirbnbText>
-          {weights.map((weight) => (
-            <AirbnbText key={`normal-${weight}`} size="l" weight={weight} align="center">
-              Airbnb
-            </AirbnbText>
-          ))}
-          {variants.map((variant) => (
-            <AirbnbText key={`normal-${variant}`} size="l" variant={variant} align="center">
-              {`[${variant}] Airbnb`}
-            </AirbnbText>
-          ))}
-        </View>
-        <View>
-          <AirbnbText size="l" italic align="center">
-            Default
-          </AirbnbText>
-          <AirbnbText size="l" italic bold align="center">
-            Default
-          </AirbnbText>
-          {weights.map((weight) => (
-            <AirbnbText key={`italic-${weight}`} size="l" italic weight={weight} align="center">
-              Airbnb
-            </AirbnbText>
-          ))}
-          {variants.map((variant) => (
-            <AirbnbText key={`normal-${variant}`} size="l" italic variant={variant} align="center">
-              {`[${variant}] Airbnb`}
-            </AirbnbText>
-          ))}
-        </View>
-      </View>
-    </ScrollView>
+      </ScrollView>
+    </SafeAreaView>
   )
 }
 
-export default Index
+export default ExploreRouterScreen

@@ -34,6 +34,7 @@ export type Palette = {
   }
   icon: {
     primary: Color
+    'primary-core': LinearGradient
     'primary-disabled': Color
     'primary-error': Color
     'primary-inverse': Color
