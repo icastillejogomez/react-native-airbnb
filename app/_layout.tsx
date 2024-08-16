@@ -1,9 +1,10 @@
 import { useFonts } from 'expo-font'
 import { Stack } from 'expo-router'
 import * as SplashScreen from 'expo-splash-screen'
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { Platform } from 'react-native'
+import { GestureHandlerRootView } from 'react-native-gesture-handler'
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -60,20 +61,22 @@ export default function RootLayout() {
 
 function RootLayoutNav() {
   return (
-    <SafeAreaProvider>
-      <Stack initialRouteName="(tabs)">
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen
-          name="(auth)"
-          options={{
-            headerShown: false,
-            presentation: 'modal',
-            animation: Platform.OS === 'ios' ? 'default' : 'fade',
-            gestureDirection: 'vertical',
-            gestureEnabled: true,
-          }}
-        />
-      </Stack>
-    </SafeAreaProvider>
+    <GestureHandlerRootView>
+      <SafeAreaProvider>
+        <Stack initialRouteName="(tabs)">
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          <Stack.Screen
+            name="(auth)"
+            options={{
+              headerShown: false,
+              presentation: 'modal',
+              animation: Platform.OS === 'ios' ? 'default' : 'fade',
+              gestureDirection: 'vertical',
+              gestureEnabled: true,
+            }}
+          />
+        </Stack>
+      </SafeAreaProvider>
+    </GestureHandlerRootView>
   )
 }
