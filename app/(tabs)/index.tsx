@@ -1,13 +1,24 @@
-import React, { useCallback } from 'react'
+import React, { useCallback, useEffect } from 'react'
 import { ScrollView, View } from 'react-native'
 import { AirbnbText } from '@/components'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { AirbnbButton } from '@/components/atoms'
+import { useSession } from '@/hooks'
+import { useRouter } from 'expo-router'
 
 const ExploreRouterScreen = () => {
+  const router = useRouter()
+  const { session, loaded: sessionLoaded } = useSession()
+
   const handlePress = useCallback(() => {
     console.log('handlePress')
   }, [])
+
+  useEffect(() => {
+    if (sessionLoaded && !session) {
+      router.push('/(auth)/sign-in-up')
+    }
+  }, [router, sessionLoaded, session])
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
