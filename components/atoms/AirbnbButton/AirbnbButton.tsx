@@ -1,6 +1,6 @@
 import { AirbnbText } from '@/components/native'
 import { forwardRef, useCallback } from 'react'
-import { View, Pressable, PressableProps, StyleProp, ViewStyle, Platform, GestureResponderEvent } from 'react-native'
+import { View, Pressable, PressableProps, StyleProp, ViewStyle, GestureResponderEvent } from 'react-native'
 import Animated, { interpolate, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated'
 
 import { styles } from './styles'
@@ -56,7 +56,8 @@ const AirbnbButton = forwardRef<View, AirbnbButtonProps>((props, ref) => {
       <AirbnbText
         color={variant === 'contained' ? 'primary-inverse' : 'primary'}
         weight={variant === 'contained' ? '600' : '500'}
-        variant="body1">
+        variant="body1"
+      >
         {label}
       </AirbnbText>
     </AnimatedPressable>

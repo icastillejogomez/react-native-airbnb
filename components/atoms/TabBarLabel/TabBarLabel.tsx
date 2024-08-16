@@ -15,7 +15,8 @@ const TabBarLabel: FC<TabBarLabelProps> = ({ isFocused, label, testID }) => {
       variant="caption"
       weight={isFocused ? '600' : '400'}
       color={isFocused ? 'primary-core' : 'primary'}
-      style={styles.label}>
+      style={styles.label}
+    >
       {label}
     </AirbnbText>
   )

@@ -42,7 +42,8 @@ const AirbnbTabBar: FC<AirbnbTabBarProps> = ({ state, descriptors, navigation, i
       style={[
         styles.conatiner,
         { paddingBottom: insets.bottom, paddingLeft: insets.left, paddingRight: insets.right, backgroundColor: palette.background.primary },
-      ]}>
+      ]}
+    >
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key]
         const label = (

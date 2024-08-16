@@ -171,13 +171,15 @@ const AirbnbText: FC<AirbnbTextProps> = (props) => {
           <Text {...rest} style={style}>
             {typeof children === 'string' && maxLength !== undefined ? truncateTextLength(children, maxLength, true) : children}
           </Text>
-        }>
+        }
+      >
         <ExpoLinearGradient
           dither={Platform.OS === 'ios'}
           colors={c.colors}
           locations={c.locations}
           start={gradientStart}
-          end={gradientEnd}>
+          end={gradientEnd}
+        >
           <Text {...rest} style={[style, { opacity: 0 }]}>
             {typeof children === 'string' && maxLength !== undefined ? truncateTextLength(children, maxLength, true) : children}
           </Text>
