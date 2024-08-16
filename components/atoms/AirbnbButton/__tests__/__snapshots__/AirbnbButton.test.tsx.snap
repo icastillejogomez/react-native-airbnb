@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AirbnbButton renders without crashing 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  jestAnimatedStyle={
+    {
+      "value": {
+        "transform": [
+          {
+            "scale": 1,
+          },
+        ],
+      },
+    }
+  }
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#FF385C",
+      "borderRadius": 8,
+      "flexDirection": "row",
+      "height": 48,
+      "justifyContent": "center",
+      "paddingHorizontal": 16,
+      "paddingVertical": 8,
+      "transform": [
+        {
+          "scale": 1,
+        },
+      ],
+    }
+  }
+>
+  <Text
+    style={
+      [
+        {
+          "fontSize": 16,
+        },
+        {
+          "color": "#FFFFFF",
+        },
+        {
+          "fontFamily": "Montserrat-Medium",
+          "fontSize": 16,
+          "lineHeight": 24,
+        },
+        {
+          "fontFamily": "Montserrat-SemiBold",
+        },
+        {},
+        {},
+        {
+          "textAlign": "auto",
+        },
+        {},
+        {},
+      ]
+    }
+  >
+    Airbnb
+  </Text>
+</View>
+`;

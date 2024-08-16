@@ -13,12 +13,12 @@ export type AirbnbButtonVariant = 'contained' | 'outlined'
 
 export type AirbnbButtonProps = Omit<PressableProps, 'style'> & {
   variant?: AirbnbButtonVariant
-  label: string
+  title: string
   style?: ViewStyle
 }
 
 const AirbnbButton = forwardRef<View, AirbnbButtonProps>((props, ref) => {
-  const { label, variant = 'contained', style: parentStyle, onPressIn, onPressOut, ...rest } = props
+  const { title, variant = 'contained', style: parentStyle, onPressIn, onPressOut, ...rest } = props
 
   const palette = usePalette()
   const isScaled = useSharedValue(0)
@@ -58,7 +58,7 @@ const AirbnbButton = forwardRef<View, AirbnbButtonProps>((props, ref) => {
         weight={variant === 'contained' ? '600' : '500'}
         variant="body1"
       >
-        {label}
+        {title}
       </AirbnbText>
     </AnimatedPressable>
   )

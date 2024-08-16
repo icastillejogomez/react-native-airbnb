@@ -16,8 +16,8 @@ const ExploreRouterScreen = () => {
           Airbnb
         </AirbnbText>
         <View style={{ alignItems: 'center', marginTop: 32, gap: 16, width: '100%' }}>
-          <AirbnbButton label="Continue" style={{ alignSelf: 'stretch', marginHorizontal: 40 }} onPress={handlePress} />
-          <AirbnbButton label="Continue" variant="outlined" style={{ alignSelf: 'stretch', marginHorizontal: 40 }} onPress={handlePress} />
+          <AirbnbButton title="Continue" style={{ alignSelf: 'stretch', marginHorizontal: 40 }} onPress={handlePress} />
+          <AirbnbButton title="Continue" variant="outlined" style={{ alignSelf: 'stretch', marginHorizontal: 40 }} onPress={handlePress} />
         </View>
       </ScrollView>
     </SafeAreaView>
