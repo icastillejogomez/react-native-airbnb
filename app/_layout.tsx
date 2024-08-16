@@ -70,7 +70,7 @@ function RootLayoutNav() {
             presentation: 'modal',
             animation: Platform.OS === 'ios' ? 'default' : 'fade',
             gestureDirection: 'vertical',
-            gestureEnabled: false,
+            gestureEnabled: true,
           }}
         />
       </Stack>
