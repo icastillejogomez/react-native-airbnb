@@ -9,7 +9,7 @@ import { truncateTextLength } from '@/utils'
 
 export type AirbnbTextVariant = 'body1' | 'body2' | 'subtitle1' | 'subtitle2' | 'caption' | 'overline'
 export type AirbnbTextColor = keyof Palette['text']
-export type AirbnbTextSize = 'inherit' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl'
+export type AirbnbTextSize = 'inherit' | 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl'
 export type AirbnbTextWeight = 'normal' | 'bold' | '100' | '200' | '300' | '400' | '500' | '600' | '700' | '800' | '900'
 export type AirbnbTextDecoration = 'none' | 'underline' | 'line-through' | 'underline line-through'
 export type AirbnbTextAlign = 'auto' | 'left' | 'center' | 'right' | 'justify'

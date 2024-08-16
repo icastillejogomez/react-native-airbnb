@@ -13,6 +13,9 @@ export default function TabLayout() {
       safeAreaInsets={insets}
       initialRouteName="index"
       tabBar={(props) => <AirbnbTabBar {...props} />}
+      sceneContainerStyle={{
+        backgroundColor: palette.background.primary,
+      }}
       screenOptions={{
         tabBarActiveTintColor: palette.icon['primary-core'].plainColor,
         tabBarInactiveTintColor: palette.icon.secondary,
@@ -23,21 +26,18 @@ export default function TabLayout() {
         options={{
           title: 'Explore',
           headerShown: false,
-          // tabBarIcon: ({ color }) => <TabBarIcon tintColor={color} icon="explore" />,
         }}
       />
       <Tabs.Screen
         name="wishlist"
         options={{
           title: 'Wishlist',
-          // tabBarIcon: ({ color }) => <TabBarIcon tintColor={color} icon="wishlist" />,
         }}
       />
       <Tabs.Screen
         name="trips"
         options={{
           title: 'Trips',
-          // tabBarIcon: ({ color }) => <TabBarIcon tintColor={color} icon="trips" />,
         }}
       />
       <Tabs.Screen
@@ -45,14 +45,13 @@ export default function TabLayout() {
         options={{
           title: 'Messages',
           headerTitle: 'Inbox',
-          // tabBarIcon: ({ color }) => <TabBarIcon tintColor={color} icon="messages" />,
         }}
       />
       <Tabs.Screen
         name="profile"
         options={{
           title: 'Profile',
-          // tabBarIcon: ({ color }) => <TabBarIcon tintColor={color} icon="profile" />,
+          headerShown: false,
         }}
       />
     </Tabs>

@@ -48,7 +48,7 @@ exports[`AirbnbButton renders without crashing 1`] = `
       "backgroundColor": "#FF385C",
       "borderRadius": 8,
       "flexDirection": "row",
-      "height": 48,
+      "height": 54,
       "justifyContent": "center",
       "paddingHorizontal": 16,
       "paddingVertical": 8,
@@ -72,7 +72,6 @@ exports[`AirbnbButton renders without crashing 1`] = `
         {
           "fontFamily": "Montserrat-Medium",
           "fontSize": 16,
-          "lineHeight": 24,
         },
         {
           "fontFamily": "Montserrat-SemiBold",

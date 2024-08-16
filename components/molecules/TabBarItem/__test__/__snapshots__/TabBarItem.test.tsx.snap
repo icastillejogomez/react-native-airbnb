@@ -70,20 +70,19 @@ exports[`TabBarItem should match snapshot 1`] = `
             {},
             {
               "fontFamily": "Montserrat-Medium",
-              "fontSize": 12,
-              "lineHeight": 20,
+              "fontSize": 13,
             },
             {
               "fontFamily": "Montserrat-SemiBold",
             },
-            {},
+            {
+              "fontSize": 10,
+            },
             {},
             {
               "textAlign": "auto",
             },
-            {
-              "fontSize": 10,
-            },
+            {},
             {},
           ]
         }
@@ -129,20 +128,19 @@ exports[`TabBarItem should match snapshot 1`] = `
               {},
               {
                 "fontFamily": "Montserrat-Medium",
-                "fontSize": 12,
-                "lineHeight": 20,
+                "fontSize": 13,
               },
               {
                 "fontFamily": "Montserrat-SemiBold",
               },
-              {},
+              {
+                "fontSize": 10,
+              },
               {},
               {
                 "textAlign": "auto",
               },
-              {
-                "fontSize": 10,
-              },
+              {},
               {},
             ],
             {

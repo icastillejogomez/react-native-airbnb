@@ -12,9 +12,9 @@ export {
 } from 'expo-router'
 
 // eslint-disable-next-line camelcase
-// export const unstable_settings = {
-//   initialRouteName: '(tabs)',
-// }
+export const unstable_settings = {
+  initialRouteName: '(tabs)',
+}
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync()
@@ -75,6 +75,7 @@ function RootLayoutNav() {
               gestureEnabled: true,
             }}
           />
+          <Stack.Screen name="(settings)" options={{ headerShown: false }} />
         </Stack>
       </SafeAreaProvider>
     </GestureHandlerRootView>

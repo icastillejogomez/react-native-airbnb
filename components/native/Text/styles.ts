@@ -17,27 +17,27 @@ export const decorations = StyleSheet.create<Record<AirbnbTextDecoration, TextSt
 const variants = StyleSheet.create<Record<AirbnbTextVariant, TextStyle>>({
   body1: {
     fontSize: 16,
-    lineHeight: 24, // 16 * 1.5
+    // lineHeight: 24, // 16 * 1.5
   },
   body2: {
     fontSize: 15,
-    lineHeight: 21, // 15 * 1.4
+    // lineHeight: 21, // 15 * 1.4
   },
   subtitle1: {
     fontSize: 16,
-    lineHeight: 28, // 16 * 1.75
+    // lineHeight: 28, // 16 * 1.75
   },
   subtitle2: {
     fontSize: 14,
-    lineHeight: 22, // 14 * 1.57
+    // lineHeight: 22, // 14 * 1.57
   },
   caption: {
-    fontSize: 12,
-    lineHeight: 20, // 12 * 1.66
+    fontSize: 13,
+    // lineHeight: 20, // 12 * 1.66
   },
   overline: {
     fontSize: 12,
-    lineHeight: 32, // 12 * 2.66
+    // lineHeight: 32, // 12 * 2.66
     textTransform: 'uppercase',
   },
 })
@@ -171,31 +171,34 @@ export const variantsItalic = StyleSheet.create<Record<AirbnbTextVariant, TextSt
 export const sizes = StyleSheet.create<Record<AirbnbTextSize, TextStyle>>({
   inherit: {
     fontSize: undefined,
-    lineHeight: undefined,
+    // lineHeight: undefined,
+  },
+  xxs: {
+    fontSize: 10,
   },
   xs: {
     fontSize: 12,
-    lineHeight: 16, // 12 * 1.33
+    // lineHeight: 16, // 12 * 1.33
   },
   s: {
     fontSize: 14,
-    lineHeight: 19.6, // 14 * 1.4
+    // lineHeight: 19.6, // 14 * 1.4
   },
   m: {
     fontSize: 16,
-    lineHeight: 24, // 16 * 1.5
+    // lineHeight: 24, // 16 * 1.5
   },
   l: {
-    fontSize: 18,
-    lineHeight: 25.2, // 18 * 1.4
+    fontSize: 20,
+    // lineHeight: 25.2, // 18 * 1.4
   },
   xl: {
-    fontSize: 20,
-    lineHeight: 28, // 20 * 1.4
+    fontSize: 24,
+    // lineHeight: 28, // 20 * 1.4
   },
   xxl: {
-    fontSize: 24,
-    lineHeight: 33.6, // 24 * 1.4
+    fontSize: 32,
+    // lineHeight: 33.6, // 24 * 1.4
   },
 })
 

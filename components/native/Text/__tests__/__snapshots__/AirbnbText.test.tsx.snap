@@ -13,7 +13,6 @@ exports[`AirbnbText alignments renders with align="auto" 1`] = `
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Medium",
@@ -45,7 +44,6 @@ exports[`AirbnbText alignments renders with align="center" 1`] = `
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Medium",
@@ -77,7 +75,6 @@ exports[`AirbnbText alignments renders with align="justify" 1`] = `
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Medium",
@@ -109,7 +106,6 @@ exports[`AirbnbText alignments renders with align="left" 1`] = `
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Medium",
@@ -141,7 +137,6 @@ exports[`AirbnbText alignments renders with align="right" 1`] = `
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Medium",
@@ -173,7 +168,6 @@ exports[`AirbnbText decorations renders with decoration="line-through" 1`] = `
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Medium",
@@ -207,7 +201,6 @@ exports[`AirbnbText decorations renders with decoration="none" 1`] = `
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Medium",
@@ -239,7 +232,6 @@ exports[`AirbnbText decorations renders with decoration="underline line-through"
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Medium",
@@ -273,7 +265,6 @@ exports[`AirbnbText decorations renders with decoration="underline" 1`] = `
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Medium",
@@ -307,7 +298,6 @@ exports[`AirbnbText overwrites bold overwrite over given weight 1`] = `
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Bold",
@@ -339,7 +329,6 @@ exports[`AirbnbText overwrites parent style overwrites alignment 1`] = `
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Medium",
@@ -374,7 +363,6 @@ exports[`AirbnbText overwrites parent style overwrites decoration 1`] = `
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Medium",
@@ -411,14 +399,12 @@ exports[`AirbnbText overwrites parent style overwrites font size 1`] = `
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Medium",
       },
       {
         "fontSize": 14,
-        "lineHeight": 19.6,
       },
       {},
       {
@@ -448,7 +434,6 @@ exports[`AirbnbText overwrites parent style overwrites font style through inject
       {
         "fontFamily": "Montserrat-MediumItalic",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-BoldItalic",
@@ -483,7 +468,6 @@ exports[`AirbnbText overwrites parent style overwrites font style through inject
       {
         "fontFamily": "Montserrat-MediumItalic",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-MediumItalic",
@@ -518,7 +502,6 @@ exports[`AirbnbText overwrites parent style overwrites font weight and font styl
       {
         "fontFamily": "Montserrat-MediumItalic",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-BoldItalic",
@@ -553,7 +536,6 @@ exports[`AirbnbText overwrites parent style overwrites font weight through injec
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Regular",
@@ -588,7 +570,6 @@ exports[`AirbnbText renders with Montserrat font 1`] = `
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Medium",
@@ -620,7 +601,6 @@ exports[`AirbnbText renders with children 1`] = `
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Medium",
@@ -652,7 +632,6 @@ exports[`AirbnbText renders without crashing 1`] = `
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Medium",
@@ -682,7 +661,6 @@ exports[`AirbnbText shortcuts renders with bold 1`] = `
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Bold",
@@ -714,7 +692,6 @@ exports[`AirbnbText shortcuts renders with bold and italic 1`] = `
       {
         "fontFamily": "Montserrat-MediumItalic",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-BoldItalic",
@@ -746,7 +723,6 @@ exports[`AirbnbText shortcuts renders with italic 1`] = `
       {
         "fontFamily": "Montserrat-MediumItalic",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-MediumItalic",
@@ -778,14 +754,12 @@ exports[`AirbnbText sizes renders with size="inherit" 1`] = `
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Medium",
       },
       {
         "fontSize": undefined,
-        "lineHeight": undefined,
       },
       {},
       {
@@ -813,14 +787,12 @@ exports[`AirbnbText sizes renders with size="l" 1`] = `
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Medium",
       },
       {
-        "fontSize": 18,
-        "lineHeight": 25.2,
+        "fontSize": 20,
       },
       {},
       {
@@ -848,14 +820,12 @@ exports[`AirbnbText sizes renders with size="m" 1`] = `
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Medium",
       },
       {
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {},
       {
@@ -883,14 +853,12 @@ exports[`AirbnbText sizes renders with size="s" 1`] = `
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Medium",
       },
       {
         "fontSize": 14,
-        "lineHeight": 19.6,
       },
       {},
       {
@@ -918,14 +886,12 @@ exports[`AirbnbText sizes renders with size="xl" 1`] = `
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Medium",
       },
       {
-        "fontSize": 20,
-        "lineHeight": 28,
+        "fontSize": 24,
       },
       {},
       {
@@ -953,14 +919,12 @@ exports[`AirbnbText sizes renders with size="xs" 1`] = `
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Medium",
       },
       {
         "fontSize": 12,
-        "lineHeight": 16,
       },
       {},
       {
@@ -988,14 +952,12 @@ exports[`AirbnbText sizes renders with size="xxl" 1`] = `
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Medium",
       },
       {
-        "fontSize": 24,
-        "lineHeight": 33.6,
+        "fontSize": 32,
       },
       {},
       {
@@ -1023,7 +985,6 @@ exports[`AirbnbText variants renders with variant="body1" 1`] = `
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Medium",
@@ -1055,7 +1016,6 @@ exports[`AirbnbText variants renders with variant="body2" 1`] = `
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 15,
-        "lineHeight": 21,
       },
       {
         "fontFamily": "Montserrat-Medium",
@@ -1086,8 +1046,7 @@ exports[`AirbnbText variants renders with variant="caption" 1`] = `
       },
       {
         "fontFamily": "Montserrat-Medium",
-        "fontSize": 12,
-        "lineHeight": 20,
+        "fontSize": 13,
       },
       {
         "fontFamily": "Montserrat-Medium",
@@ -1119,7 +1078,6 @@ exports[`AirbnbText variants renders with variant="overline" 1`] = `
       {
         "fontFamily": "Montserrat-SemiBold",
         "fontSize": 12,
-        "lineHeight": 32,
         "textTransform": "uppercase",
       },
       {
@@ -1152,7 +1110,6 @@ exports[`AirbnbText variants renders with variant="subtitle1" 1`] = `
       {
         "fontFamily": "Montserrat-SemiBold",
         "fontSize": 16,
-        "lineHeight": 28,
       },
       {
         "fontFamily": "Montserrat-Medium",
@@ -1184,7 +1141,6 @@ exports[`AirbnbText variants renders with variant="subtitle2" 1`] = `
       {
         "fontFamily": "Montserrat-SemiBold",
         "fontSize": 14,
-        "lineHeight": 22,
       },
       {
         "fontFamily": "Montserrat-Medium",
@@ -1216,7 +1172,6 @@ exports[`AirbnbText weights italic font family renders with italic weight="{ wei
       {
         "fontFamily": "Montserrat-MediumItalic",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-ThinItalic",
@@ -1248,7 +1203,6 @@ exports[`AirbnbText weights italic font family renders with italic weight="{ wei
       {
         "fontFamily": "Montserrat-MediumItalic",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-ExtraLightItalic",
@@ -1280,7 +1234,6 @@ exports[`AirbnbText weights italic font family renders with italic weight="{ wei
       {
         "fontFamily": "Montserrat-MediumItalic",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-LightItalic",
@@ -1312,7 +1265,6 @@ exports[`AirbnbText weights italic font family renders with italic weight="{ wei
       {
         "fontFamily": "Montserrat-MediumItalic",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Italic",
@@ -1344,7 +1296,6 @@ exports[`AirbnbText weights italic font family renders with italic weight="{ wei
       {
         "fontFamily": "Montserrat-MediumItalic",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-MediumItalic",
@@ -1376,7 +1327,6 @@ exports[`AirbnbText weights italic font family renders with italic weight="{ wei
       {
         "fontFamily": "Montserrat-MediumItalic",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-SemiBoldItalic",
@@ -1408,7 +1358,6 @@ exports[`AirbnbText weights italic font family renders with italic weight="{ wei
       {
         "fontFamily": "Montserrat-MediumItalic",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-BoldItalic",
@@ -1440,7 +1389,6 @@ exports[`AirbnbText weights italic font family renders with italic weight="{ wei
       {
         "fontFamily": "Montserrat-MediumItalic",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-ExtraBoldItalic",
@@ -1472,7 +1420,6 @@ exports[`AirbnbText weights italic font family renders with italic weight="{ wei
       {
         "fontFamily": "Montserrat-MediumItalic",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-BlackItalic",
@@ -1504,7 +1451,6 @@ exports[`AirbnbText weights italic font family renders with italic weight="{ wei
       {
         "fontFamily": "Montserrat-MediumItalic",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-BoldItalic",
@@ -1536,7 +1482,6 @@ exports[`AirbnbText weights italic font family renders with italic weight="{ wei
       {
         "fontFamily": "Montserrat-MediumItalic",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {},
       {},
@@ -1566,7 +1511,6 @@ exports[`AirbnbText weights regular font family renders with regular weight="{ w
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Thin",
@@ -1598,7 +1542,6 @@ exports[`AirbnbText weights regular font family renders with regular weight="{ w
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-ExtraLight",
@@ -1630,7 +1573,6 @@ exports[`AirbnbText weights regular font family renders with regular weight="{ w
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Light",
@@ -1662,7 +1604,6 @@ exports[`AirbnbText weights regular font family renders with regular weight="{ w
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Regular",
@@ -1694,7 +1635,6 @@ exports[`AirbnbText weights regular font family renders with regular weight="{ w
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Medium",
@@ -1726,7 +1666,6 @@ exports[`AirbnbText weights regular font family renders with regular weight="{ w
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-SemiBold",
@@ -1758,7 +1697,6 @@ exports[`AirbnbText weights regular font family renders with regular weight="{ w
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Bold",
@@ -1790,7 +1728,6 @@ exports[`AirbnbText weights regular font family renders with regular weight="{ w
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-ExtraBold",
@@ -1822,7 +1759,6 @@ exports[`AirbnbText weights regular font family renders with regular weight="{ w
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Black",
@@ -1854,7 +1790,6 @@ exports[`AirbnbText weights regular font family renders with regular weight="{ w
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Bold",
@@ -1886,7 +1821,6 @@ exports[`AirbnbText weights regular font family renders with regular weight="{ w
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {},
       {},
@@ -1916,7 +1850,6 @@ exports[`AirbnbText wrapping max text length 1`] = `
       {
         "fontFamily": "Montserrat-Medium",
         "fontSize": 16,
-        "lineHeight": 24,
       },
       {
         "fontFamily": "Montserrat-Medium",

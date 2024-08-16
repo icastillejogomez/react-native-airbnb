@@ -1,8 +1,8 @@
-import { StyleSheet } from 'react-native'
+import { Platform, StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
   container: {
-    height: 48,
+    height: Platform.select({ ios: 54, android: 52 }),
     borderRadius: 8,
     flexDirection: 'row',
     alignItems: 'center',

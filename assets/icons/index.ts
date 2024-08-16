@@ -1,9 +1,16 @@
 export const iconsSources = {
-  search: require('./search.svg'),
-  wishlist: require('./wishlist.svg'),
+  accessiility: require('./accessiility.svg'),
+  chevronRight: require('./chevron-right.svg'),
+  chevronLeft: require('./chevron-left.svg'),
+  goBackChevron: require('./go-back-chevron.svg'),
+  closeCross: require('./close-cross.svg'),
   explore: require('./explore.svg'),
-  trips: require('./trips.svg'),
+  getHelp: require('./get-help.svg'),
   messages: require('./messages.svg'),
   profile: require('./profile.svg'),
-  closeCross: require('./close-cross.svg'),
-}
+  search: require('./search.svg'),
+  settings: require('./settings.svg'),
+  thirdPartyTools: require('./third-party-tools.svg'),
+  trips: require('./trips.svg'),
+  wishlist: require('./wishlist.svg'),
+} as const
