@@ -3,6 +3,7 @@ import { AirbnbButton } from '@/components/atoms'
 import { AirbnbYourPlaceCard } from '@/components/molecules'
 import { AirbnbText } from '@/components/native'
 import { AirbnbMainApplicationLayout } from '@/components/templates'
+import { useAuth } from '@/state'
 import { usePalette } from '@/theme'
 import { Image, ImageSource } from 'expo-image'
 import { Href, Link, useRouter } from 'expo-router'
@@ -41,32 +42,40 @@ const settingsListNavigation: SettingsListNavigationProps[] = [
 export type ProfileScreenProps = {}
 
 const ProfileScreen: FC<ProfileScreenProps> = () => {
+  const auth = useAuth()
   const router = useRouter()
   const palette = usePalette()
 
+  const handleLogoutPress = useCallback(async () => {
+    await auth?.logout()
+  }, [auth])
+
   const handleLoginPress = useCallback(() => {
-    router.push('/(auth)/sign-in-up')
+    router.push('/(auth)/login')
   }, [router])
 
   return (
     <AirbnbMainApplicationLayout headerTitle="Profile" headerContainerStyle={styles.header} scrollEnabled>
       <AirbnbText color="secondary">Log in to start planning your next trip.</AirbnbText>
 
-      <View style={styles.authContainer}>
-        <AirbnbButton title="Log in" variant="contained" onPress={handleLoginPress} />
-        <View style={styles.signupContentRow}>
-          <AirbnbText variant="caption" color="secondary">
-            Don't have an account?
-          </AirbnbText>
-          <Link href="/(auth)/sign-in-up">
-            <AirbnbText variant="caption" weight="600" color="primary" decoration="underline">
-              Sign up
+      {auth && !auth.userProfile && (
+        <View style={styles.authContainer}>
+          <AirbnbButton title="Log in" variant="contained" onPress={handleLoginPress} />
+          <View style={styles.signupContentRow}>
+            <AirbnbText variant="caption" color="secondary">
+              Don't have an account?
             </AirbnbText>
-          </Link>
+            {}
+            <Link href="/(auth)/login">
+              <AirbnbText variant="caption" weight="600" color="primary" decoration="underline">
+                Sign up
+              </AirbnbText>
+            </Link>
+          </View>
         </View>
-      </View>
+      )}
 
-      <AirbnbYourPlaceCard />
+      <AirbnbYourPlaceCard style={styles.airbnbYourPlaceCard} />
 
       <FlatList
         style={styles.settingsList}
@@ -95,6 +104,16 @@ const ProfileScreen: FC<ProfileScreenProps> = () => {
         )}
         ItemSeparatorComponent={() => <View style={[styles.separator, { borderColor: palette.text.secondary }]} />}
       />
+
+      {auth && auth.userProfile && (
+        <View style={styles.logoutContainer}>
+          <TouchableOpacity onPress={handleLogoutPress} activeOpacity={0.6}>
+            <AirbnbText variant="caption" color="secondary" decoration="underline">
+              Log out
+            </AirbnbText>
+          </TouchableOpacity>
+        </View>
+      )}
     </AirbnbMainApplicationLayout>
   )
 }
@@ -109,13 +128,15 @@ const styles = StyleSheet.create({
   },
   authContainer: {
     marginTop: 40,
-    marginBottom: 48,
     gap: 24,
   },
   signupContentRow: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 2,
+  },
+  airbnbYourPlaceCard: {
+    marginTop: 48,
   },
   settingsList: {
     marginTop: 24,
@@ -140,5 +161,9 @@ const styles = StyleSheet.create({
   icon: {
     width: 24,
     height: 24,
+  },
+  logoutContainer: {
+    marginTop: 24,
+    marginBottom: 24,
   },
 })

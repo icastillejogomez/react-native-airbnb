@@ -2,13 +2,13 @@ import { AirbnbCard } from '@/components/atoms'
 import { AirbnbText } from '@/components/native'
 import { Image } from 'expo-image'
 import { FC } from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, View, ViewProps } from 'react-native'
 
-export type AirbnbYourPlaceCardProps = {}
+export type AirbnbYourPlaceCardProps = ViewProps & {}
 
-const AirbnbYourPlaceCard: FC<AirbnbYourPlaceCardProps> = (props) => {
+const AirbnbYourPlaceCard: FC<AirbnbYourPlaceCardProps> = ({ style: parentStyle, ...rest }) => {
   return (
-    <AirbnbCard style={styles.card}>
+    <AirbnbCard style={[styles.card, parentStyle]} {...rest}>
       <View style={styles.content}>
         <AirbnbText variant="body1" color="primary" weight="600">
           Airbnb your place

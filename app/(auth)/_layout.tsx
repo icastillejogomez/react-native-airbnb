@@ -9,7 +9,7 @@ const AuthRouterLayout = () => {
   return (
     <Stack>
       <Stack.Screen
-        name="sign-in-up"
+        name="login"
         options={{
           title: 'Log in or sign up',
           headerTintColor: palette.icon.primary,

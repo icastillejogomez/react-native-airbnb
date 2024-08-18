@@ -5,6 +5,7 @@ import React, { useEffect } from 'react'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { Platform } from 'react-native'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
+import { AuthProvider } from '@/state/auth'
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -61,23 +62,25 @@ export default function RootLayout() {
 
 function RootLayoutNav() {
   return (
-    <GestureHandlerRootView>
-      <SafeAreaProvider>
-        <Stack initialRouteName="(tabs)">
-          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen
-            name="(auth)"
-            options={{
-              headerShown: false,
-              presentation: 'modal',
-              animation: Platform.OS === 'ios' ? 'default' : 'fade',
-              gestureDirection: 'vertical',
-              gestureEnabled: true,
-            }}
-          />
-          <Stack.Screen name="(settings)" options={{ headerShown: false }} />
-        </Stack>
-      </SafeAreaProvider>
-    </GestureHandlerRootView>
+    <AuthProvider>
+      <GestureHandlerRootView>
+        <SafeAreaProvider>
+          <Stack initialRouteName="(tabs)">
+            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+            <Stack.Screen
+              name="(auth)"
+              options={{
+                headerShown: false,
+                presentation: 'modal',
+                animation: Platform.OS === 'ios' ? 'default' : 'fade',
+                gestureDirection: 'vertical',
+                gestureEnabled: true,
+              }}
+            />
+            <Stack.Screen name="(settings)" options={{ headerShown: false }} />
+          </Stack>
+        </SafeAreaProvider>
+      </GestureHandlerRootView>
+    </AuthProvider>
   )
 }
