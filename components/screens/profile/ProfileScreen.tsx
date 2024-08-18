@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
     gap: 2,
   },
   settingsList: {
-    marginTop: 40,
+    marginTop: 24,
     flex: 1,
   },
   settingsListContentContainer: {
