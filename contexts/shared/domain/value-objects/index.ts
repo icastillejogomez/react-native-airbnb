@@ -1,0 +1,6 @@
+export * from './StringValueObject'
+export * from './NumberValueObject'
+export * from './DateValueObject'
+export * from './NonEmptyStringValueObject'
+export * from './PositiveIntegerValueObject'
+export * from './AggregateRootId'

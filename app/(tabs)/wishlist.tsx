@@ -1,4 +1,4 @@
-import { TabBarIcon } from '@/components'
+import { TabBarIcon } from '@/components/atoms'
 import React, { useState, ReactNode } from 'react'
 import { Text, View, Button } from 'react-native'
 

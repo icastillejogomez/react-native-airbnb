@@ -2,7 +2,7 @@ import React from 'react'
 import { Tabs } from 'expo-router'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { usePalette } from '@/theme'
-import { AirbnbTabBar } from '@/components'
+import { AirbnbTabBar } from '@/components/organisms'
 
 export default function TabLayout() {
   const palette = usePalette()

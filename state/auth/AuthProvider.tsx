@@ -4,10 +4,13 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 import { AuthContext } from './AuthContext'
 import { AuthContextProps } from './AuthContextProps'
 import { Nullable, UserSession } from '@/types'
+import { useGetSessionToken, useLogin } from '@/hooks'
 
 const STORAGE_KEY = '@auth:refreshToken'
 
 export const AuthProvider: FC<PropsWithChildren> = ({ children }) => {
+  const loginUseCase = useLogin()
+  const getSessionTokenUseCase = useGetSessionToken()
   const [refreshToken, setRefreshToken] = useState<Nullable<string>>(null)
   const [sessionToken, setSessionToken] = useState<Nullable<string>>(null)
   const [userProfile, setUserProfile] = useState<Nullable<UserSession['profile']>>(null)
@@ -24,9 +27,12 @@ export const AuthProvider: FC<PropsWithChildren> = ({ children }) => {
     } satisfies UserSession['profile']
   }, [])
 
-  const fetchSessionToken = useCallback(async (refreshToken: string) => {
-    return 'sessionToken'
-  }, [])
+  const fetchSessionToken = useCallback(
+    async (refreshToken: string) => {
+      return await getSessionTokenUseCase.execute({ refreshToken })
+    },
+    [getSessionTokenUseCase],
+  )
 
   const getSessionToken = useCallback(async () => {
     if (!isReady) {
@@ -40,7 +46,7 @@ export const AuthProvider: FC<PropsWithChildren> = ({ children }) => {
     // TODO: Check if token is expired
     const expired = true
     if (expired) {
-      const sessionToken = await fetchSessionToken(refreshToken)
+      const { sessionToken } = await fetchSessionToken(refreshToken)
       setSessionToken(sessionToken)
       return sessionToken
     }
@@ -57,7 +63,7 @@ export const AuthProvider: FC<PropsWithChildren> = ({ children }) => {
         }
         return Promise.reject(new Error('No refresh token found'))
       })
-      .then((sessionToken) => {
+      .then(({ sessionToken }) => {
         setSessionToken(sessionToken)
         return fetchUserProfile(sessionToken)
       })
@@ -79,15 +85,15 @@ export const AuthProvider: FC<PropsWithChildren> = ({ children }) => {
   const login = useCallback(
     async (email: string, password: string) => {
       console.debug(`'perform login with email: ${email} and password: ${password}`)
-      const refreshToken = 'refreshToken'
-      const sessionToken = await fetchSessionToken(refreshToken)
+      const { refreshToken } = await loginUseCase.execute({ email, password })
+      const { sessionToken } = await fetchSessionToken(refreshToken)
       const userProfile = await fetchUserProfile(sessionToken)
       setUserProfile(userProfile)
       setRefreshToken(refreshToken)
       setSessionToken(sessionToken)
       AsyncStorage.setItem(STORAGE_KEY, refreshToken)
     },
-    [fetchSessionToken, fetchUserProfile, setUserProfile, setRefreshToken, setSessionToken],
+    [loginUseCase, fetchSessionToken, fetchUserProfile, setUserProfile, setRefreshToken, setSessionToken],
   )
 
   const logout = useCallback(async () => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { ProfileScreen } from '@/components'
+import { ProfileScreen } from '@/components/screens'
 
 const ProfileRouterScreen = () => {
   return <ProfileScreen />

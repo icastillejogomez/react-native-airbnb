@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { ScrollView, View } from 'react-native'
-import { AirbnbText } from '@/components'
+import { AirbnbText } from '@/components/native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { AirbnbButton } from '@/components/atoms'
 import { useRouter } from 'expo-router'

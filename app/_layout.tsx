@@ -1,11 +1,12 @@
 import { useFonts } from 'expo-font'
 import { Stack } from 'expo-router'
 import * as SplashScreen from 'expo-splash-screen'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { Platform } from 'react-native'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import { AuthProvider } from '@/state/auth'
+import { loadKernel } from '@/kernel'
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -20,8 +21,24 @@ export const unstable_settings = {
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync()
 
+type AppReadiness = {
+  fontsLoaded: boolean
+  kernelLoaded: boolean
+}
+
+const defaultAppReadinessState: AppReadiness = {
+  fontsLoaded: false,
+  kernelLoaded: false,
+}
+
+function isAppReady(readiness: AppReadiness): boolean {
+  return readiness.fontsLoaded && readiness.kernelLoaded
+}
+
 export default function RootLayout() {
-  const [loaded, error] = useFonts({
+  const [appReadiness, setAppReadiness] = useState<AppReadiness>(defaultAppReadinessState)
+
+  const [fontsLoaded, error] = useFonts({
     'Montserrat-Black': require('../assets/fonts/Montserrat-Black.ttf'),
     'Montserrat-BlackItalic': require('../assets/fonts/Montserrat-BlackItalic.ttf'),
     'Montserrat-Bold': require('../assets/fonts/Montserrat-Bold.ttf'),
@@ -42,25 +59,32 @@ export default function RootLayout() {
     'Montserrat-ThinItalic': require('../assets/fonts/Montserrat-ThinItalic.ttf'),
   })
 
+  useEffect(() => {
+    loadKernel()
+    setAppReadiness((prev) => ({ ...prev, kernelLoaded: true }))
+  }, [setAppReadiness])
+
   // Expo Router uses Error Boundaries to catch errors in the navigation tree.
   useEffect(() => {
     if (error) throw error
   }, [error])
 
   useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync()
-    }
-  }, [loaded])
+    setAppReadiness((prev) => ({ ...prev, fontsLoaded }))
+  }, [fontsLoaded, setAppReadiness])
 
-  if (!loaded) {
+  if (!isAppReady(appReadiness)) {
     return null
   }
 
-  return <RootLayoutNav />
+  return <App />
 }
 
-function RootLayoutNav() {
+function App() {
+  useEffect(() => {
+    SplashScreen.hideAsync()
+  }, [])
+
   return (
     <AuthProvider>
       <GestureHandlerRootView>

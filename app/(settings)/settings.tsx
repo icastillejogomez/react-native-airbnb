@@ -1,7 +1,8 @@
 import { View } from 'react-native'
 import React, { useCallback } from 'react'
 import * as WebBrowser from 'expo-web-browser'
-import { AirbnbButton, AirbnbMainApplicationLayout } from '@/components'
+import { AirbnbButton } from '@/components/atoms'
+import { AirbnbMainApplicationLayout } from '@/components/templates'
 
 const SettingsRouterScreen = () => {
   const handlePress = useCallback(() => {
