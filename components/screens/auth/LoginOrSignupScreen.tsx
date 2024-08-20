@@ -1,6 +1,6 @@
 import { FC, useCallback, useState } from 'react'
 import { View, StyleSheet } from 'react-native'
-import { AirbnbButton, SocialSingleSignOnButton } from '@/components/atoms'
+import { AirbnbButton, SocialSingleSignOnButton, TextField } from '@/components/atoms'
 import { useAuth } from '@/state'
 import { useRouter } from 'expo-router'
 import { AirbnbModalLayout } from '@/components/templates'
@@ -33,7 +33,18 @@ const LoginOrSignupScreen: FC<LoginOrSignupScreenProps> = (props) => {
   return (
     <AirbnbModalLayout style={styles.container}>
       <View style={styles.formContainer}>
-        <View style={styles.form} />
+        <View style={styles.form}>
+          <TextField
+            helperText="This is a helper text"
+            keepHelperTextSpace
+            label="Email"
+            placeholder="Hello world"
+            keyboardType="email-address"
+            autoCapitalize="none"
+            // helperTextLeftErrorIconSource={iconsSources.chevronLeft}
+            error
+          />
+        </View>
         {signInBy === 'phone' && (
           <AirbnbText variant="caption" color="secondary">
             We'll call or text you to confirm your number. Standard message and data rates apply.
@@ -84,15 +95,10 @@ export { LoginOrSignupScreen }
 
 const styles = StyleSheet.create({
   container: {
-    gap: 32,
-  },
-  formContainer: {
     gap: 24,
   },
-  form: {
-    height: 130,
-    backgroundColor: 'gray',
-  },
+  formContainer: {},
+  form: {},
   separator: {
     flexDirection: 'row',
     alignItems: 'center',

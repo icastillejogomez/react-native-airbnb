@@ -1,11 +1,13 @@
 import { Children, cloneElement, FC, isValidElement, useMemo } from 'react'
-import { Color, LinearGradient, Palette, useTheme } from '@/theme'
 import { StyleProp, Text, TextProps, TextStyle, Platform } from 'react-native'
 import { LinearGradient as ExpoLinearGradient } from 'expo-linear-gradient'
+import MaskedView from '@react-native-masked-view/masked-view'
+import Animated, { AnimatedStyle } from 'react-native-reanimated'
 
 import * as styles from './styles'
-import MaskedView from '@react-native-masked-view/masked-view'
+
 import { truncateTextLength } from '@/utils'
+import { Color, LinearGradient, Palette, useTheme } from '@/theme'
 
 export type AirbnbTextVariant = 'body1' | 'body2' | 'subtitle1' | 'subtitle2' | 'caption' | 'overline'
 export type AirbnbTextColor = keyof Palette['text']
@@ -25,6 +27,7 @@ export type AirbnbTextProps = TextProps & {
   italic?: boolean
   avoidGradient?: boolean
   maxLength?: number
+  animatedStyle?: AnimatedStyle
 }
 
 function isLinearGradient(color: Palette['text'][keyof Palette['text']]): color is LinearGradient {
@@ -32,6 +35,7 @@ function isLinearGradient(color: Palette['text'][keyof Palette['text']]): color 
 }
 
 type NumericWeight = '100' | '200' | '300' | '400' | '500' | '600' | '700' | '800' | '900'
+
 function getNumericWeightFromLabel(weight: TextStyle['fontWeight']): NumericWeight {
   switch (weight) {
     case 'normal':
@@ -78,6 +82,7 @@ const AirbnbText: FC<AirbnbTextProps> = (props) => {
     italic,
     align,
     maxLength,
+    animatedStyle,
     ...rest
   } = props
 
@@ -188,20 +193,32 @@ const AirbnbText: FC<AirbnbTextProps> = (props) => {
     )
   }
 
-  return (
-    <Text {...rest} style={style}>
-      {Children.map(children, (child) => {
-        if (typeof child === 'string') return maxLength !== undefined ? truncateTextLength(child, maxLength, true) : child
+  const TextComponent = animatedStyle ? Animated.Text : Text
 
-        /* @ts-ignore */
-        if (isValidElement(child) && child.type.displayName === 'AirbnbText') {
-          return cloneElement(child, { avoidGradient: true } as AirbnbTextProps)
-        }
+  const child = Children.map(children, (child) => {
+    if (typeof child === 'string') return maxLength !== undefined ? truncateTextLength(child, maxLength, true) : child
 
-        return child
-      })}
-    </Text>
-  )
+    /* @ts-ignore */
+    if (isValidElement(child) && child.type.displayName === 'AirbnbText') {
+      return cloneElement(child, { avoidGradient: true } as AirbnbTextProps)
+    }
+
+    return child
+  })
+
+  if (animatedStyle) {
+    return (
+      <Animated.Text {...rest} style={[style, animatedStyle]}>
+        {child}
+      </Animated.Text>
+    )
+  } else {
+    return (
+      <TextComponent {...rest} style={style}>
+        {child}
+      </TextComponent>
+    )
+  }
 }
 AirbnbText.displayName = 'AirbnbText'
 export { AirbnbText }
