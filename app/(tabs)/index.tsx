@@ -12,7 +12,7 @@ const ExploreRouterScreen = () => {
   const auth = useAuth()
 
   const handlePress = useCallback(() => {
-    console.log('handlePress')
+    // console.log('handlePress')
   }, [])
 
   /**

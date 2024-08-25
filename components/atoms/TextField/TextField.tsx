@@ -1,4 +1,4 @@
-import { FC, forwardRef, ReactNode, useCallback, useImperativeHandle, useMemo, useRef, useState } from 'react'
+import { forwardRef, ReactNode, useCallback, useImperativeHandle, useMemo, useRef, useState } from 'react'
 import {
   View,
   ViewStyle,
@@ -9,20 +9,22 @@ import {
   TextInputFocusEventData,
   Pressable,
   StyleSheet,
+  StyleProp,
+  LayoutChangeEvent,
 } from 'react-native'
 
 import { styles } from './styles'
 import { usePalette } from '@/theme'
-import Animated, { runOnUI, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated'
+import { runOnUI, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated'
 import { AirbnbText } from '@/components/native'
-import { Image, ImageSource } from 'expo-image'
-import { iconsSources } from '@/assets/icons'
+import { ImageSource } from 'expo-image'
+import { TextFieldHelperText } from '../TextFieldHelperText'
 
 export type TextFieldProps = Omit<TextInputProps, 'style'> & {
   containerTestID?: string
   labelTestID?: string
   helperTextTestID?: string
-  containerStyles?: ViewStyle
+  containerStyles?: StyleProp<ViewStyle>
   label: string
   helperText?: string | ReactNode
   keepHelperTextSpace?: boolean
@@ -31,9 +33,11 @@ export type TextFieldProps = Omit<TextInputProps, 'style'> & {
   hideHelperTextLeftErrorIcon?: boolean
   helperTextLeftErrorIconSource?: ImageSource
   error?: boolean
+  inputContainerStyles?: StyleProp<ViewStyle>
+  onInputContainerLayout?: (e: LayoutChangeEvent) => void
 }
 
-const TextField: FC<TextFieldProps> = forwardRef<TextInput, TextFieldProps>((props, outerRef) => {
+const TextField = forwardRef<TextInput, TextFieldProps>((props, outerRef) => {
   // Destructure props
   const {
     containerStyles,
@@ -53,6 +57,8 @@ const TextField: FC<TextFieldProps> = forwardRef<TextInput, TextFieldProps>((pro
     rightDecorator,
     hideHelperTextLeftErrorIcon,
     helperTextLeftErrorIconSource,
+    inputContainerStyles,
+    onInputContainerLayout,
     ...rest
   } = props
 
@@ -123,12 +129,14 @@ const TextField: FC<TextFieldProps> = forwardRef<TextInput, TextFieldProps>((pro
   return (
     <View style={style} testID={containerTestID}>
       <Pressable onPress={forceFocus}>
-        <Animated.View
+        <View
+          onLayout={onInputContainerLayout}
           style={[
             styles.inputContainer,
             { borderColor: error ? palette.text['primary-error'] : palette.text.secondary },
             { backgroundColor: error ? palette.background['primary-error'] : palette.background.primary },
             { borderWidth: isFocus ? 1 : StyleSheet.hairlineWidth },
+            inputContainerStyles,
           ]}
         >
           {/* left decorator */}
@@ -159,35 +167,16 @@ const TextField: FC<TextFieldProps> = forwardRef<TextInput, TextFieldProps>((pro
 
           {/* right decorator */}
           {rightDecorator}
-        </Animated.View>
+        </View>
       </Pressable>
       {(helperText || keepHelperTextSpace) && (
-        <View style={styles.helperTextContainer}>
-          {!helperText ? null : typeof helperText !== 'string' ? (
-            helperText
-          ) : (
-            <>
-              {!hideHelperTextLeftErrorIcon && (
-                <Image
-                  source={helperTextLeftErrorIconSource ?? iconsSources.getHelp}
-                  style={styles.helperTextIcon}
-                  tintColor={palette.text['primary-error']}
-                  contentFit="cover"
-                />
-              )}
-              <AirbnbText
-                testID={helperTextTestID}
-                variant="caption"
-                color={error ? 'primary-error' : 'secondary'}
-                size="xs"
-                weight={error ? '600' : '500'}
-                style={styles.helperText}
-              >
-                {helperText}
-              </AirbnbText>
-            </>
-          )}
-        </View>
+        <TextFieldHelperText
+          error={error}
+          hideLeftErrorIcon={hideHelperTextLeftErrorIcon}
+          leftErrorIconSource={helperTextLeftErrorIconSource}
+        >
+          {helperText}
+        </TextFieldHelperText>
       )}
     </View>
   )

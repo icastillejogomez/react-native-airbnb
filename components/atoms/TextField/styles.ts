@@ -33,15 +33,4 @@ export const styles = StyleSheet.create({
     fontFamily: 'Montserrat-Medium',
     fontSize: 14,
   },
-  helperTextContainer: {
-    minHeight: 20,
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-  },
-  helperTextIcon: {
-    width: 16,
-    height: 16,
-  },
-  helperText: {},
 })

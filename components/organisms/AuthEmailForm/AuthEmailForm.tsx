@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { StyleSheet, View } from 'react-native'
-import { AirbnbButton, TextField } from '@/components/atoms'
-import { Controller, useForm } from 'react-hook-form'
+import { AirbnbButton, ControlledTextField } from '@/components/atoms'
+import { useForm } from 'react-hook-form'
 import Animated from 'react-native-reanimated'
 
 interface IEmailLoginForm {
@@ -20,9 +20,9 @@ const AuthEmailForm: FC<AuthEmailFormProps> = ({ onSubmit }) => {
   return (
     <Animated.View style={styles.container}>
       <View style={styles.form}>
-        <Controller
-          control={control}
+        <ControlledTextField
           name="email"
+          control={control}
           rules={{
             validate: (value) => {
               // Check if is valid email
@@ -33,26 +33,13 @@ const AuthEmailForm: FC<AuthEmailFormProps> = ({ onSubmit }) => {
               return 'This is not a valid email address'
             },
           }}
-          render={({ field, fieldState: { error } }) => {
-            return (
-              <TextField
-                keepHelperTextSpace
-                label="Email"
-                helperText={error ? error.message : undefined}
-                keyboardType="email-address"
-                autoCapitalize="none"
-                error={!!error?.message}
-                value={field.value}
-                onChangeText={(text) => {
-                  field.onChange(text)
-                }}
-              />
-            )
-          }}
+          label="Email"
+          keyboardType="email-address"
+          autoCapitalize="none"
         />
       </View>
 
-      <AirbnbButton title="Continue" variant="contained" onPress={handleSubmit(onSubmit)} />
+      <AirbnbButton style={styles.submitButton} title="Continue" variant="contained" onPress={handleSubmit(onSubmit)} />
     </Animated.View>
   )
 }
@@ -62,4 +49,7 @@ export { AuthEmailForm }
 const styles = StyleSheet.create({
   container: {},
   form: {},
+  submitButton: {
+    marginTop: 24,
+  },
 })

@@ -76,6 +76,7 @@ export const AuthProvider: FC<PropsWithChildren> = ({ children }) => {
           return Promise.reject(error)
         }
       })
+      // eslint-disable-next-line no-console
       .catch(console.error)
       .finally(() => {
         setIsReady(true)
@@ -84,7 +85,6 @@ export const AuthProvider: FC<PropsWithChildren> = ({ children }) => {
 
   const login = useCallback(
     async (email: string, password: string) => {
-      console.debug(`'perform login with email: ${email} and password: ${password}`)
       const { refreshToken } = await loginUseCase.execute({ email, password })
       const { sessionToken } = await fetchSessionToken(refreshToken)
       const userProfile = await fetchUserProfile(sessionToken)

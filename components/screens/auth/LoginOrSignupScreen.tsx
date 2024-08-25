@@ -28,6 +28,7 @@ const LoginOrSignupScreen: FC<LoginOrSignupScreenProps> = (props) => {
             router.back()
           })
           .catch((error) => {
+            // eslint-disable-next-line no-console
             console.error(error)
           })
       }
@@ -65,10 +66,21 @@ const LoginOrSignupScreen: FC<LoginOrSignupScreenProps> = (props) => {
             tintColor={palette.text.primary}
           />
         )}
-        <SocialSingleSignOnButton label="Continue with Apple" onPress={() => console.log('press')} iconSource={socialIconSources.apple} />
-        <SocialSingleSignOnButton label="Continue with Google" onPress={() => console.log('press')} iconSource={socialIconSources.google} />
+        <SocialSingleSignOnButton
+          label="Continue with Apple"
+          // eslint-disable-next-line no-console
+          onPress={() => console.log('press')}
+          iconSource={socialIconSources.apple}
+        />
+        <SocialSingleSignOnButton
+          label="Continue with Google"
+          // eslint-disable-next-line no-console
+          onPress={() => console.log('press')}
+          iconSource={socialIconSources.google}
+        />
         <SocialSingleSignOnButton
           label="Continue with Facebook"
+          // eslint-disable-next-line no-console
           onPress={() => console.log('press')}
           iconSource={socialIconSources.facebook}
         />
