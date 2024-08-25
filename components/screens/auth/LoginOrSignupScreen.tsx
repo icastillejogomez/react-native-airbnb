@@ -1,6 +1,6 @@
 import { FC, useCallback, useState } from 'react'
 import { View, StyleSheet } from 'react-native'
-import { AirbnbButton, SocialSingleSignOnButton, TextField } from '@/components/atoms'
+import { SocialSingleSignOnButton } from '@/components/atoms'
 import { useAuth } from '@/state'
 import { useRouter } from 'expo-router'
 import { AirbnbModalLayout } from '@/components/templates'
@@ -8,6 +8,7 @@ import { AirbnbText } from '@/components/native'
 import { usePalette } from '@/theme'
 import { socialIconSources } from '@/assets/icons/rrss'
 import { iconsSources } from '@/assets/icons'
+import { AuthEmailForm, AuthPhoneForm } from '@/components/organisms'
 
 export type LoginOrSignupScreenProps = {}
 
@@ -15,44 +16,30 @@ const LoginOrSignupScreen: FC<LoginOrSignupScreenProps> = (props) => {
   const palette = usePalette()
   const router = useRouter()
   const auth = useAuth()
+
   const [signInBy, setSignInBy] = useState<'email' | 'phone'>('email')
 
-  const handlePress = useCallback(() => {
-    if (auth) {
-      auth
-        .login('john@acme.com', 'acme1234')
-        .then(() => {
-          router.back()
-        })
-        .catch((error) => {
-          console.error(error)
-        })
-    }
-  }, [router, auth])
+  const handleEmailSubmit = useCallback(
+    ({ email }: { email: string }) => {
+      if (auth) {
+        auth
+          .login(email, 'acme1234')
+          .then(() => {
+            router.back()
+          })
+          .catch((error) => {
+            console.error(error)
+          })
+      }
+    },
+    [router, auth],
+  )
+
+  const handlePhoneSubmit = useCallback(() => {}, [])
 
   return (
     <AirbnbModalLayout style={styles.container}>
-      <View style={styles.formContainer}>
-        <View style={styles.form}>
-          <TextField
-            helperText="This is a helper text"
-            keepHelperTextSpace
-            label="Email"
-            placeholder="Hello world"
-            keyboardType="email-address"
-            autoCapitalize="none"
-            // helperTextLeftErrorIconSource={iconsSources.chevronLeft}
-            error
-          />
-        </View>
-        {signInBy === 'phone' && (
-          <AirbnbText variant="caption" color="secondary">
-            We'll call or text you to confirm your number. Standard message and data rates apply.
-          </AirbnbText>
-        )}
-      </View>
-
-      <AirbnbButton title="Continue" variant="contained" onPress={handlePress} />
+      {signInBy === 'email' ? <AuthEmailForm onSubmit={handleEmailSubmit} /> : <AuthPhoneForm onSubmit={handlePhoneSubmit} />}
 
       <View style={styles.separator}>
         <View style={[styles.separatorLine, { borderColor: palette.text.secondary }]} />
@@ -97,7 +84,6 @@ const styles = StyleSheet.create({
   container: {
     gap: 24,
   },
-  formContainer: {},
   form: {},
   separator: {
     flexDirection: 'row',

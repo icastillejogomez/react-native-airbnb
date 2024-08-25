@@ -8,6 +8,7 @@ import {
   NativeSyntheticEvent,
   TextInputFocusEventData,
   Pressable,
+  StyleSheet,
 } from 'react-native'
 
 import { styles } from './styles'
@@ -122,7 +123,14 @@ const TextField: FC<TextFieldProps> = forwardRef<TextInput, TextFieldProps>((pro
   return (
     <View style={style} testID={containerTestID}>
       <Pressable onPress={forceFocus}>
-        <Animated.View style={[styles.inputContainer, { borderColor: palette.text.secondary }, { borderWidth: isFocus ? 1 : 0.5 }]}>
+        <Animated.View
+          style={[
+            styles.inputContainer,
+            { borderColor: error ? palette.text['primary-error'] : palette.text.secondary },
+            { backgroundColor: error ? palette.background['primary-error'] : palette.background.primary },
+            { borderWidth: isFocus ? 1 : StyleSheet.hairlineWidth },
+          ]}
+        >
           {/* left decorator */}
           {leftDecorator}
 
@@ -131,9 +139,9 @@ const TextField: FC<TextFieldProps> = forwardRef<TextInput, TextFieldProps>((pro
               variant="body2"
               size="s"
               color="secondary"
-              weight={'500'}
+              weight={error ? '600' : '500'}
               testID={labelTestID}
-              style={styles.label}
+              style={[styles.label, { color: error ? palette.text['primary-error'] : palette.text.secondary }]}
               animatedStyle={labelAnimatedStyles}
             >
               {label}
