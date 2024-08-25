@@ -1,7 +1,6 @@
 import { FC, useCallback, useState } from 'react'
 import { View, StyleSheet } from 'react-native'
 import { SocialSingleSignOnButton } from '@/components/atoms'
-import { useAuth } from '@/state'
 import { useRouter } from 'expo-router'
 import { AirbnbModalLayout } from '@/components/templates'
 import { AirbnbText } from '@/components/native'
@@ -15,25 +14,17 @@ export type LoginOrSignupScreenProps = {}
 const LoginOrSignupScreen: FC<LoginOrSignupScreenProps> = (props) => {
   const palette = usePalette()
   const router = useRouter()
-  const auth = useAuth()
 
   const [signInBy, setSignInBy] = useState<'email' | 'phone'>('email')
 
   const handleEmailSubmit = useCallback(
     ({ email }: { email: string }) => {
-      if (auth) {
-        auth
-          .login(email, 'acme1234')
-          .then(() => {
-            router.back()
-          })
-          .catch((error) => {
-            // eslint-disable-next-line no-console
-            console.error(error)
-          })
-      }
+      router.push({
+        pathname: Math.random() > 0.5 ? '/(auth)/login' : '/(auth)/signup',
+        params: { email },
+      })
     },
-    [router, auth],
+    [router],
   )
 
   const handlePhoneSubmit = useCallback(() => {}, [])

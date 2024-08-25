@@ -1,5 +1,5 @@
 import { useFonts } from 'expo-font'
-import { Stack } from 'expo-router'
+import { Stack, useSegments } from 'expo-router'
 import * as SplashScreen from 'expo-splash-screen'
 import React, { useEffect, useState } from 'react'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
@@ -15,7 +15,7 @@ export {
 
 // eslint-disable-next-line camelcase
 export const unstable_settings = {
-  initialRouteName: '(tabs)',
+  initialRouteName: '(tabs)/index',
 }
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
@@ -81,6 +81,8 @@ export default function RootLayout() {
 }
 
 function App() {
+  const segment = useSegments()
+
   useEffect(() => {
     SplashScreen.hideAsync()
   }, [])
@@ -89,7 +91,7 @@ function App() {
     <AuthProvider>
       <GestureHandlerRootView>
         <SafeAreaProvider>
-          <Stack initialRouteName="(tabs)">
+          <Stack initialRouteName="(tabs)/index">
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
             <Stack.Screen
               name="(auth)"
@@ -97,8 +99,7 @@ function App() {
                 headerShown: false,
                 presentation: 'modal',
                 animation: Platform.OS === 'ios' ? 'default' : 'fade',
-                gestureDirection: 'vertical',
-                gestureEnabled: true,
+                gestureEnabled: segment.length === 1 && segment[0] === '(auth)',
               }}
             />
             <Stack.Screen name="(settings)" options={{ headerShown: false }} />

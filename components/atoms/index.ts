@@ -1,6 +1,7 @@
 export * from './AirbnbButton'
 export * from './AirbnbCard'
 export * from './ControlledTextField'
+export * from './HeaderBackModalButton'
 export * from './HeaderCloseModalButton'
 export * from './SocialSingleSignOnButton'
 export * from './TabBarIcon'

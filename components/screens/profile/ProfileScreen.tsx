@@ -51,7 +51,7 @@ const ProfileScreen: FC<ProfileScreenProps> = () => {
   }, [auth])
 
   const handleLoginPress = useCallback(() => {
-    router.push('/(auth)/login')
+    router.push('/(auth)')
   }, [router])
 
   return (

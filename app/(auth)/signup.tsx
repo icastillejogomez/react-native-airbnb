@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar'
 import { Platform, View, Text } from 'react-native'
 import { useLocalSearchParams } from 'expo-router'
 
-const AuthLoginRouterScreen = () => {
+const AuthSignUpRouterScreen = () => {
   const { email } = useLocalSearchParams()
 
   return (
@@ -15,4 +15,4 @@ const AuthLoginRouterScreen = () => {
   )
 }
 
-export default AuthLoginRouterScreen
+export default AuthSignUpRouterScreen

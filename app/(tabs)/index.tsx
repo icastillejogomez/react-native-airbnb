@@ -23,7 +23,7 @@ const ExploreRouterScreen = () => {
     if (auth && !authChecked) {
       setAuthChecked(true)
       if (!auth.userProfile) {
-        router.push('/(auth)/login')
+        router.push('/(auth)')
       }
     }
   }, [router, auth, authChecked, setAuthChecked])
