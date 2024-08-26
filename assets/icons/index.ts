@@ -15,4 +15,5 @@ export const iconsSources = {
   thirdPartyTools: require('./third-party-tools.svg'),
   trips: require('./trips.svg'),
   wishlist: require('./wishlist.svg'),
+  infoContained: require('./info-contained.svg'),
 } as const

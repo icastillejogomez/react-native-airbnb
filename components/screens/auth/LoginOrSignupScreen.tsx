@@ -1,5 +1,5 @@
 import { FC, useCallback, useState } from 'react'
-import { View, StyleSheet } from 'react-native'
+import { View, StyleSheet, Alert } from 'react-native'
 import { SocialSingleSignOnButton } from '@/components/atoms'
 import { useRouter } from 'expo-router'
 import { AirbnbModalLayout } from '@/components/templates'
@@ -8,26 +8,47 @@ import { usePalette } from '@/theme'
 import { socialIconSources } from '@/assets/icons/rrss'
 import { iconsSources } from '@/assets/icons'
 import { AuthEmailForm, AuthPhoneForm } from '@/components/organisms'
+import { useProviderOAuthSignIn } from '@/hooks/useCases/users/useProviderOAuthSignIn'
+import { useIsEmailAlreadyTaken } from '@/hooks/useCases/users/useIsEmailAlreadyTaken'
+import { OAuthProvider } from '@/types'
 
 export type LoginOrSignupScreenProps = {}
 
 const LoginOrSignupScreen: FC<LoginOrSignupScreenProps> = (props) => {
   const palette = usePalette()
   const router = useRouter()
+  const isEmailAlreadyTakenUseCase = useIsEmailAlreadyTaken()
+  const providerOAuthSignInUseCase = useProviderOAuthSignIn()
 
   const [signInBy, setSignInBy] = useState<'email' | 'phone'>('email')
 
   const handleEmailSubmit = useCallback(
     ({ email }: { email: string }) => {
-      router.push({
-        pathname: Math.random() > 0.5 ? '/(auth)/login' : '/(auth)/signup',
-        params: { email },
-      })
+      isEmailAlreadyTakenUseCase
+        .execute({ email })
+        .then((isEmailAlreadyTaken) => {
+          router.push({
+            pathname: isEmailAlreadyTaken ? '/(auth)/login' : '/(auth)/signup',
+            params: { email },
+          })
+        })
+        .catch((error) => {
+          Alert.alert('Error', error.message)
+        })
     },
-    [router],
+    [router, isEmailAlreadyTakenUseCase],
   )
 
   const handlePhoneSubmit = useCallback(() => {}, [])
+
+  const handleProviderOAuth = useCallback(
+    (provider: OAuthProvider) => {
+      providerOAuthSignInUseCase.execute(provider).catch((error) => {
+        Alert.alert('Error', error.message)
+      })
+    },
+    [providerOAuthSignInUseCase],
+  )
 
   return (
     <AirbnbModalLayout style={styles.container}>
@@ -59,20 +80,17 @@ const LoginOrSignupScreen: FC<LoginOrSignupScreenProps> = (props) => {
         )}
         <SocialSingleSignOnButton
           label="Continue with Apple"
-          // eslint-disable-next-line no-console
-          onPress={() => console.log('press')}
+          onPress={() => handleProviderOAuth(OAuthProvider.APPLE)}
           iconSource={socialIconSources.apple}
         />
         <SocialSingleSignOnButton
           label="Continue with Google"
-          // eslint-disable-next-line no-console
-          onPress={() => console.log('press')}
+          onPress={() => handleProviderOAuth(OAuthProvider.GOOGLE)}
           iconSource={socialIconSources.google}
         />
         <SocialSingleSignOnButton
           label="Continue with Facebook"
-          // eslint-disable-next-line no-console
-          onPress={() => console.log('press')}
+          onPress={() => handleProviderOAuth(OAuthProvider.FACEBOOK)}
           iconSource={socialIconSources.facebook}
         />
       </View>

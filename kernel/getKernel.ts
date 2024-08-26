@@ -1,7 +1,7 @@
 import { Nullable } from '@/types'
 import { KernelContainer } from './KernelContainer'
 import { FakeAirbnbAPIClient } from '@/adapters'
-import { GetSessionTokenUseCase, LoginUseCase } from '@/contexts/users/application'
+import { GetSessionTokenUseCase, IsEmailAlreadyTakenUseCase, LoginUseCase, ProviderOAuthSignInUseCase } from '@/contexts/users/application'
 
 let kernel: Nullable<KernelContainer> = null
 
@@ -10,6 +10,8 @@ export function loadKernel(): void {
 
   const loginUseCase = new LoginUseCase(airbnbAPIClient)
   const getSessionTokenUseCase = new GetSessionTokenUseCase(airbnbAPIClient)
+  const providerOAuthSignInUseCase = new ProviderOAuthSignInUseCase()
+  const isEmailAlreadyTakenUseCase = new IsEmailAlreadyTakenUseCase(airbnbAPIClient)
 
   kernel = {
     adapters: {
@@ -19,6 +21,8 @@ export function loadKernel(): void {
       users: {
         login: loginUseCase,
         getSessionToken: getSessionTokenUseCase,
+        providerOAuthSignIn: providerOAuthSignInUseCase,
+        isEmailAlreadyTaken: isEmailAlreadyTakenUseCase,
       },
     },
   }

@@ -1,5 +1,5 @@
 import { AirbnbAPIClient } from '@/adapters'
-import { GetSessionTokenUseCase, LoginUseCase } from '@/contexts/users/application'
+import { GetSessionTokenUseCase, IsEmailAlreadyTakenUseCase, LoginUseCase, ProviderOAuthSignInUseCase } from '@/contexts/users/application'
 
 export type KernelContainer = {
   adapters: {
@@ -9,6 +9,8 @@ export type KernelContainer = {
     users: {
       login: LoginUseCase
       getSessionToken: GetSessionTokenUseCase
+      providerOAuthSignIn: ProviderOAuthSignInUseCase
+      isEmailAlreadyTaken: IsEmailAlreadyTakenUseCase
     }
   }
 }

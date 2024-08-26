@@ -1,12 +1,13 @@
 import { FC, PropsWithChildren, useState, useEffect, useMemo, useCallback } from 'react'
-import AsyncStorage from '@react-native-async-storage/async-storage'
+import * as SecureStore from 'expo-secure-store'
 
 import { AuthContext } from './AuthContext'
 import { AuthContextProps } from './AuthContextProps'
 import { Nullable, UserSession } from '@/types'
 import { useGetSessionToken, useLogin } from '@/hooks'
+import { Constants } from '@/Constants'
 
-const STORAGE_KEY = '@auth:refreshToken'
+const STORAGE_KEY = Constants.secureStore.keys.refreshToken
 
 export const AuthProvider: FC<PropsWithChildren> = ({ children }) => {
   const loginUseCase = useLogin()
@@ -17,6 +18,7 @@ export const AuthProvider: FC<PropsWithChildren> = ({ children }) => {
   const [isReady, setIsReady] = useState(false)
 
   const fetchUserProfile = useCallback(async (sessionToken: string) => {
+    // TODO: Move this logic to api client
     return {
       uid: '123',
       name: 'John',
@@ -55,7 +57,7 @@ export const AuthProvider: FC<PropsWithChildren> = ({ children }) => {
   }, [isReady, refreshToken, sessionToken, fetchSessionToken])
 
   useEffect(() => {
-    AsyncStorage.getItem(STORAGE_KEY)
+    SecureStore.getItemAsync(STORAGE_KEY)
       .then((refreshToken) => {
         if (refreshToken) {
           setRefreshToken(refreshToken)
@@ -91,13 +93,13 @@ export const AuthProvider: FC<PropsWithChildren> = ({ children }) => {
       setUserProfile(userProfile)
       setRefreshToken(refreshToken)
       setSessionToken(sessionToken)
-      AsyncStorage.setItem(STORAGE_KEY, refreshToken)
+      SecureStore.setItemAsync(STORAGE_KEY, refreshToken)
     },
     [loginUseCase, fetchSessionToken, fetchUserProfile, setUserProfile, setRefreshToken, setSessionToken],
   )
 
   const logout = useCallback(async () => {
-    AsyncStorage.removeItem(STORAGE_KEY)
+    SecureStore.deleteItemAsync(STORAGE_KEY)
     setRefreshToken(null)
     setSessionToken(null)
     setUserProfile(null)

@@ -1,10 +1,18 @@
+import { Constants } from '@/Constants'
 import { AirbnbAPIClient } from './AirbnbAPIClient'
-import { GetSessionTokenRequestDTO, GetSessionTokenResponseDTO, LoginRequestDTO, LoginResponseDTO } from './DTOs'
+import {
+  GetSessionTokenRequestDTO,
+  GetSessionTokenResponseDTO,
+  IsEmailAlreadyTakenRequestDTO,
+  LoginRequestDTO,
+  LoginResponseDTO,
+} from './DTOs'
 
-const VALID_USER_EMAIL = 'john@acme.com'
-const VALID_USER_PASSWORD = 'acme1234'
-const VALID_REFRESH_TOKEN = 'refreshToken'
-const VALID_SESSION_TOKEN = 'sessionToken'
+const VALID_USER_EMAIL = Constants.auth.registerUser.email
+const VALID_USER_PASSWORD = Constants.auth.registerUser.password
+const VALID_REFRESH_TOKEN = Constants.auth.validRefreshToken
+const VALID_SESSION_TOKEN = Constants.auth.validSessionToken
+// const VALID_PROFILE = Constants.auth.registerUser.profile
 
 export class FakeAirbnbAPIClient implements AirbnbAPIClient {
   public async login({ email, password }: LoginRequestDTO): Promise<LoginResponseDTO> {
@@ -27,5 +35,9 @@ export class FakeAirbnbAPIClient implements AirbnbAPIClient {
     }
 
     return { sessionToken: VALID_SESSION_TOKEN }
+  }
+
+  public async isEmailAlreadyTaken({ email }: IsEmailAlreadyTakenRequestDTO): Promise<boolean> {
+    return email === VALID_USER_EMAIL
   }
 }
