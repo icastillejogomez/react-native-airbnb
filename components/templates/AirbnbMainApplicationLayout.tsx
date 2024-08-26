@@ -2,27 +2,33 @@ import { FC, PropsWithChildren } from 'react'
 import { ScrollView, StyleSheet, View, SafeAreaView, Platform, ViewStyle, ScrollViewProps } from 'react-native'
 import { AirbnbText } from '../native'
 import { usePalette } from '@/theme'
+import { useAppHorizontalPadding } from '@/state'
 
 export type AirbnbMainApplicationLayoutProps = ScrollViewProps &
   PropsWithChildren<{
     headerTitle?: string
     headerContainerStyle?: ViewStyle
+    noHorizontalPadding?: boolean
   }>
 
-const AirbnbMainApplicationLayout: FC<AirbnbMainApplicationLayoutProps> = ({
-  children,
-  headerTitle,
-  headerContainerStyle,
-  style: parentStyle,
-  ...rest
-}) => {
+const AirbnbMainApplicationLayout: FC<AirbnbMainApplicationLayoutProps> = (props) => {
+  // Destructure props
+  const { children, headerTitle, headerContainerStyle, style: parentStyle, noHorizontalPadding, ...rest } = props
+
+  // Declare hooks
+  const mainApplicationHorizontalLayout = useAppHorizontalPadding()
   const palette = usePalette()
 
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView
-        style={styles.scrollView}
-        contentContainerStyle={[styles.scrollContainer, { backgroundColor: palette.background.primary }, parentStyle]}
+        style={[styles.scrollView]}
+        contentContainerStyle={[
+          styles.scrollContainer,
+          { backgroundColor: palette.background.primary },
+          { paddingHorizontal: noHorizontalPadding ? 0 : mainApplicationHorizontalLayout },
+          parentStyle,
+        ]}
         {...rest}
       >
         {headerTitle && (
@@ -53,7 +59,6 @@ const styles = StyleSheet.create({
   scrollView: {},
   scrollContainer: {
     paddingVertical: 20,
-    paddingHorizontal: 20,
     flex: 1,
   },
   header: {

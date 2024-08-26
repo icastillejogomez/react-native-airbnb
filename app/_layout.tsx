@@ -7,6 +7,7 @@ import { Platform } from 'react-native'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import { AuthProvider } from '@/state/auth'
 import { loadKernel } from '@/kernel'
+import { LayoutProvider } from '@/state'
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -88,24 +89,26 @@ function App() {
   }, [])
 
   return (
-    <AuthProvider>
-      <GestureHandlerRootView>
-        <SafeAreaProvider>
-          <Stack initialRouteName="(tabs)/index">
-            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-            <Stack.Screen
-              name="(auth)"
-              options={{
-                headerShown: false,
-                presentation: 'modal',
-                animation: Platform.OS === 'ios' ? 'default' : 'fade',
-                gestureEnabled: segment.length === 1 && segment[0] === '(auth)',
-              }}
-            />
-            <Stack.Screen name="(settings)" options={{ headerShown: false }} />
-          </Stack>
-        </SafeAreaProvider>
-      </GestureHandlerRootView>
-    </AuthProvider>
+    <LayoutProvider>
+      <AuthProvider>
+        <GestureHandlerRootView>
+          <SafeAreaProvider>
+            <Stack initialRouteName="(tabs)/index">
+              <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+              <Stack.Screen
+                name="(auth)"
+                options={{
+                  headerShown: false,
+                  presentation: 'modal',
+                  animation: Platform.OS === 'ios' ? 'default' : 'fade',
+                  gestureEnabled: segment.length === 1 && segment[0] === '(auth)',
+                }}
+              />
+              <Stack.Screen name="(settings)" options={{ headerShown: false }} />
+            </Stack>
+          </SafeAreaProvider>
+        </GestureHandlerRootView>
+      </AuthProvider>
+    </LayoutProvider>
   )
 }
