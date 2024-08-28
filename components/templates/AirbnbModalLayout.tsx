@@ -1,6 +1,6 @@
 import { usePalette } from '@/theme'
 import { FC, PropsWithChildren } from 'react'
-import { StyleSheet, ScrollView, ScrollViewProps } from 'react-native'
+import { StyleSheet, ScrollViewProps, ScrollView } from 'react-native'
 import { useAppHorizontalPadding } from '@/state'
 
 export type AirbnbModalLayoutProps = ScrollViewProps &
@@ -36,10 +36,10 @@ AirbnbModalLayout.displayName = 'AirbnbModalLayout'
 export { AirbnbModalLayout }
 
 const styles = StyleSheet.create({
-  scrollView: {},
+  scrollView: {
+    flex: 1,
+  },
   scrollContainer: {
     paddingVertical: 20,
-    paddingHorizontal: 20,
-    flex: 1,
   },
 })

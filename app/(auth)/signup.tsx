@@ -1,16 +1,19 @@
 import { StatusBar } from 'expo-status-bar'
-import { Platform, View, Text } from 'react-native'
+import { Platform } from 'react-native'
 import { useLocalSearchParams } from 'expo-router'
+import { FinishSigninUpScreen } from '@/components/screens'
 
 const AuthSignUpRouterScreen = () => {
   const { email } = useLocalSearchParams()
 
+  if (!email) {
+    throw new Error('email is required to render this screen')
+  }
+
   return (
     <>
       <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ fontSize: 40 }}>Password screen boy {email}</Text>
-      </View>
+      <FinishSigninUpScreen email={Array.isArray(email) ? email[0] : email} />
     </>
   )
 }

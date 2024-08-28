@@ -5,11 +5,13 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { AirbnbButton } from '@/components/atoms'
 import { useRouter } from 'expo-router'
 import { useAuth } from '@/state'
+import { useTranslation } from 'react-i18next'
 
 const ExploreRouterScreen = () => {
   const [authChecked, setAuthChecked] = useState(false)
   const router = useRouter()
   const auth = useAuth()
+  const { t } = useTranslation()
 
   const handlePress = useCallback(() => {
     // console.log('handlePress')
@@ -35,8 +37,13 @@ const ExploreRouterScreen = () => {
           Airbnb
         </AirbnbText>
         <View style={{ alignItems: 'center', marginTop: 32, gap: 16, width: '100%' }}>
-          <AirbnbButton title="Continue" style={{ alignSelf: 'stretch', marginHorizontal: 40 }} onPress={handlePress} />
-          <AirbnbButton title="Continue" variant="outlined" style={{ alignSelf: 'stretch', marginHorizontal: 40 }} onPress={handlePress} />
+          <AirbnbButton title={t('action.continue')} style={{ alignSelf: 'stretch', marginHorizontal: 40 }} onPress={handlePress} />
+          <AirbnbButton
+            title={t('action.continue')}
+            variant="outlined"
+            style={{ alignSelf: 'stretch', marginHorizontal: 40 }}
+            onPress={handlePress}
+          />
         </View>
         <AirbnbText variant="body2" color="secondary" style={{ marginTop: 32 }}>
           {auth && auth.userProfile ? 'Logged in as ' + auth.userProfile.name : 'Not logged in'}

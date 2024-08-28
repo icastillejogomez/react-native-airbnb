@@ -7,8 +7,10 @@ import { Image } from 'expo-image'
 import { iconsSources } from '@/assets/icons'
 import { Alert } from 'react-native'
 import { Constants } from '@/Constants'
+import { useTranslation } from 'react-i18next'
 
 const AuthRouterLayout = () => {
+  const { t } = useTranslation('auth')
   const palette = usePalette()
 
   const handlePressInfo = useCallback(() => {
@@ -31,7 +33,7 @@ const AuthRouterLayout = () => {
       <Stack.Screen
         name="index"
         options={{
-          title: 'Log in or sign up',
+          title: t('screenTitle.authIndex'),
           headerLeft: (props) => (
             <Link href="../" asChild>
               <HeaderCloseModalButton {...props} />

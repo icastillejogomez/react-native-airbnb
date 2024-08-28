@@ -9,6 +9,9 @@ import { AuthProvider } from '@/state/auth'
 import { loadKernel } from '@/kernel'
 import { LayoutProvider } from '@/state'
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import '@/i18n'
+
 export {
   // Catch any errors thrown by the Layout component.
   ErrorBoundary,

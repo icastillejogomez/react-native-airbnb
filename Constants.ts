@@ -5,6 +5,7 @@ export const Constants = {
   secureStore: {
     keys: {
       refreshToken: 'app.auth.refreshToken',
+      preferedLanguage: 'app.preferedLanguage.locale',
     },
   },
   auth: {
